@@ -12,6 +12,9 @@ public class GameLogic : MonoBehaviour
     public Text timerText;
 
     public SpriteRenderer playerSr;
+    public GameObject loadingScreen;
+    public Slider slider;
+    public Text progressText;
 
     void Start()
     {
@@ -38,8 +41,21 @@ public class GameLogic : MonoBehaviour
         timerText.text = newTime.ToString();
     }
 
-    public void RestartGame()
+    public void LoadLevel(string levelName)
     {
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadAsynchronously(levelName));
+    }
+
+    IEnumerator LoadAsynchronously(string levelName)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
+        loadingScreen.SetActive(true);
+
+        while(!operation.isDone){
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            progressText.text = progress * 100 + "%";
+            yield return null;
+        }
     }
 }
