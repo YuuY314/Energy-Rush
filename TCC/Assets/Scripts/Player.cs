@@ -8,22 +8,44 @@ public class Player : MonoBehaviour
     public float acceleration;
     public float decceleration;
     public float velPower;
+
+    public float crouchSpeed;
+    public bool isCrouching;
+
     // public float frictionAmount;
+
     public float jumpForce;
     public bool isJumping;
     public float jumpCutMultiplier;
     public float gravityScale;
     public float fallGravityMultipler;
+
     public Rigidbody2D rb;
+    public BoxCollider2D bc;
     public SpriteRenderer sr;
     public Transform groundCheckPoint;
     public Vector2 groundCheckSize;
+    public Transform cellingCheckPoint;
+    public Vector2 cellingCheckSize;
     public LayerMask groundLayer;
 
 
     void Update()
     {
+        
+    }
+
+    void FixedUpdate()
+    {
         Move();
+
+        if(Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
+            Crouch();
+        } else {
+            moveSpeed = 10;
+            bc.enabled = true;
+        }
+
         if(Input.GetButtonDown("Jump") && !isJumping){
             Jump();
             isJumping = false;
@@ -49,6 +71,15 @@ public class Player : MonoBehaviour
             sr.flipX = false;
         } else if(moveDirection < 0){
             sr.flipX = true;
+        }
+    }
+
+    void Crouch()
+    {
+        moveSpeed = crouchSpeed;
+        bc.enabled = false;
+        if(Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
+            Debug.Log("Hi mom");
         }
     }
 
