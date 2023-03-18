@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public float gravityScale;
     public float fallGravityMultipler;
 
+    public Transform tf;
     public Rigidbody2D rb;
     public BoxCollider2D bc;
     public SpriteRenderer sr;
@@ -78,9 +79,10 @@ public class Player : MonoBehaviour
     {
         moveSpeed = crouchSpeed;
         bc.enabled = false;
-        if(Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
-            Debug.Log("Hi mom");
-        }
+        
+        // if(Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
+
+        // }
     }
 
     void Jump()

@@ -27,12 +27,6 @@ public class GameLogic : MonoBehaviour
             timer -= Time.deltaTime;
             newTime = (int) timer;
             UpdateTimerText();
-
-            if(newTime == 0){
-                playerSr.flipY = true;
-            } else {
-                playerSr.flipY = false;
-            }
         }
     }
 
