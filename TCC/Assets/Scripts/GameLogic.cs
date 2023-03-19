@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance;
-    public float timer;
-    private int newTime;
-    public Text timerText;
+    public float battery;
+    private int newBattery;
+    public Slider batteryBar;
 
-    public SpriteRenderer playerSr;
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
@@ -23,16 +22,16 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        if(timer > 0){
-            timer -= Time.deltaTime;
-            newTime = (int) timer;
-            UpdateTimerText();
+        if(battery > 0){
+            battery -= Time.deltaTime;
+            newBattery = (int) battery;
+            UpdateBatteryBar();
         }
     }
 
-    public void UpdateTimerText()
+    public void UpdateBatteryBar()
     {
-        timerText.text = newTime.ToString();
+        batteryBar.value = newBattery;
     }
 
     public void LoadLevel(string levelName)
