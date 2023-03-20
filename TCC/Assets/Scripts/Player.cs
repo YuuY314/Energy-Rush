@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public float velPower;
 
     public float crouchSpeed;
-    public bool isCrouching;
+    private bool isFacingRight = true;
 
     // public float frictionAmount;
 
@@ -23,20 +23,16 @@ public class Player : MonoBehaviour
     public Transform tf;
     public Rigidbody2D rb;
     public BoxCollider2D bc;
-    public SpriteRenderer sr;
     public Transform groundCheckPoint;
     public Vector2 groundCheckSize;
     public Transform cellingCheckPoint;
     public Vector2 cellingCheckSize;
     public LayerMask groundLayer;
 
+    public Transform shootPoint;
+    public GameObject bulletPrefab;
 
     void Update()
-    {
-        
-    }
-
-    void FixedUpdate()
     {
         Move();
 
@@ -53,6 +49,10 @@ public class Player : MonoBehaviour
         }
         OnJumpUp();
         JumpGravity();
+
+        if(Input.GetButtonDown("Fire1")){
+            Shoot();
+        }
     }
 
     void Move()
@@ -68,10 +68,10 @@ public class Player : MonoBehaviour
         float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
         rb.AddForce(movement * Vector2.right);
 
-        if(moveDirection > 0){
-            sr.flipX = false;
-        } else if(moveDirection < 0){
-            sr.flipX = true;
+        if(moveDirection > 0 && !isFacingRight){
+            Flip();
+        } else if(moveDirection < 0 && isFacingRight){
+            Flip();
         }
     }
 
@@ -112,6 +112,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+    }
+
     // void Friction()
     // {
     //     if(lastGroundedTime > 0 && Mathf.Abs(InputHandler.instance.MoveInput) < 0.01f){
@@ -120,4 +125,10 @@ public class Player : MonoBehaviour
     //         rb.AddForce(Vector2.right * -amount, ForceMode2D.Impulse);
     //     }
     // }
+
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0, 180, 0);
+    }
 }
