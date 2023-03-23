@@ -8,6 +8,7 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance;
     public float battery;
+    private int batteryLimit = 900;
     private int newBattery;
     public Slider batteryBar;
 
@@ -31,7 +32,13 @@ public class GameLogic : MonoBehaviour
 
     public void UpdateBatteryBar()
     {
-        batteryBar.value = newBattery;
+        if(battery <= batteryLimit){
+            batteryBar.value = newBattery;
+        } else {
+            batteryBar.value = batteryLimit;
+            battery = batteryLimit;
+            newBattery = batteryLimit;
+        }
     }
 
     public void LoadLevel(string levelName)
