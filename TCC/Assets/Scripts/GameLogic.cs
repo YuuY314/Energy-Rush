@@ -8,7 +8,7 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance;
     public float battery;
-    private int batteryLimit = 900;
+    private int batteryLimit = 300;
     private int newBattery;
     public Slider batteryBar;
 
