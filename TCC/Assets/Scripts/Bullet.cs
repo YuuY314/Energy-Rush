@@ -6,11 +6,13 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed;
     public int bulletDamage;
+    public float energyCost;
     public Rigidbody2D rb;
 
     void Start()
     {
         rb.velocity = transform.right * bulletSpeed;
+        GameLogic.instance.battery -= energyCost;
     }
 
     void OnTriggerEnter2D(Collider2D collider)

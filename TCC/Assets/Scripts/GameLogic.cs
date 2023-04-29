@@ -11,10 +11,13 @@ public class GameLogic : MonoBehaviour
     private int batteryLimit = 300;
     private int newBattery;
     public Slider batteryBar;
+    public Image batteryBarColor;
 
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
+
+    public GameObject gameOverScreen;
 
     void Start()
     {
@@ -27,6 +30,20 @@ public class GameLogic : MonoBehaviour
             battery -= Time.deltaTime;
             newBattery = (int) battery;
             UpdateBatteryBar();
+
+            Color green = new Color(0f, 1f, 0f, 1f);
+            Color yellow = new Color(1f, 0.92f, 0.016f, 1f);
+            Color red = new Color(1f, 0f, 0f, 1f);
+            
+            if(battery > (0.75f * battery) && battery < (1f * battery)){
+                batteryBarColor.color = green;
+            } else if(battery > (0.25f * battery) && battery < (0.75f * battery)){
+                batteryBarColor.color = yellow;
+            } else {
+                batteryBarColor.color = red;
+            }
+        } else {
+            gameOverScreen.SetActive(true);
         }
     }
 
