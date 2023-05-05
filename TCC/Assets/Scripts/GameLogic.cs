@@ -22,6 +22,7 @@ public class GameLogic : MonoBehaviour
     void Start()
     {
         instance = this;
+        battery = (float) batteryLimit;
     }
 
     void Update()
@@ -34,12 +35,12 @@ public class GameLogic : MonoBehaviour
             Color green = new Color(0f, 1f, 0f, 1f);
             Color yellow = new Color(1f, 0.92f, 0.016f, 1f);
             Color red = new Color(1f, 0f, 0f, 1f);
-            
-            if(battery > (0.75f * battery) && battery < (1f * battery)){
+
+            if(battery > (0.75 * batteryLimit) && battery < (1 * batteryLimit)){
                 batteryBarColor.color = green;
-            } else if(battery > (0.25f * battery) && battery < (0.75f * battery)){
+            } else if(battery > (0.25f * batteryLimit) && battery < (0.75f * batteryLimit)){
                 batteryBarColor.color = yellow;
-            } else {
+            } else if(battery > (0.01f * batteryLimit) && battery < (0.25f * batteryLimit)) {
                 batteryBarColor.color = red;
             }
         } else {
