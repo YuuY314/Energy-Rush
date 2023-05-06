@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     public Transform shootPoint;
     public GameObject bulletPrefab;
 
+    public Animator anim;
+
     void Update()
     {
         Move();
@@ -42,9 +44,10 @@ public class Player : MonoBehaviour
         } else {
             moveSpeed = baseSpeed;
             bc.enabled = true;
+            anim.SetBool("Crouch", false);
         }
 
-        if(Input.GetButtonDown("Jump") && !isJumping){
+        if(Input.GetButtonDown("Jump") && !isJumping && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
             Jump();
             isJumping = false;
         }
@@ -82,7 +85,7 @@ public class Player : MonoBehaviour
     {
         moveSpeed = crouchSpeed;
         bc.enabled = false;
-        
+        anim.SetBool("Crouch", true);
         // if(Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
 
         // }
@@ -95,7 +98,17 @@ public class Player : MonoBehaviour
             // lastGroundedTime = 0;
             // lastJumpTime = 0;
             isJumping = true;
+            anim.SetBool("Jump", true);
             // jumpInputReleased = false;
+        }
+    }
+
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 3){
+            isJumping = false;
+            anim.SetBool("Jump", false);
         }
     }
 
