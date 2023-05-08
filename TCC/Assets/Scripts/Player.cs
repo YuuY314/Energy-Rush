@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public Transform cellingCheckPoint;
     public Vector2 cellingCheckSize;
     public LayerMask groundLayer;
+    public LayerMask ceilingLayer;
 
     public Transform shootPoint;
     public GameObject bulletPrefab;
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if(Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
+        if(Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
             Crouch();
         } else {
             moveSpeed = baseSpeed;
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Crouch", false);
         }
 
-        if(Input.GetButtonDown("Jump") && !isJumping && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
+        if(Input.GetButtonDown("Jump") && !isJumping && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
             Jump();
             isJumping = false;
         }

@@ -28,8 +28,9 @@ public class Rat : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        enemySpeed = -enemySpeed;
-        Flip();
-        Debug.Log(collider);
+        if(collider.gameObject.tag != "Trigger"){
+            enemySpeed = -enemySpeed;
+            Flip();
+        }
     }
 }

@@ -21,6 +21,9 @@ public class Bullet : MonoBehaviour
         if(enemy != null){
             enemy.TakeDamage(bulletDamage);
         }
-        Destroy(gameObject);
+        
+        if(collider.gameObject.tag != "Battery" && collider.gameObject.tag != "Trigger"){
+            Destroy(gameObject);
+        }
     }
 }

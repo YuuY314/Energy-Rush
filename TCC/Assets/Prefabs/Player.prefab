@@ -313,6 +313,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  ceilingLayer:
+    serializedVersion: 2
+    m_Bits: 64
   shootPoint: {fileID: 896620443}
   bulletPrefab: {fileID: 2857918430125847128, guid: cbe5a187b7dc2e241b1f28788292d252, type: 3}
   anim: {fileID: 1412105810}
