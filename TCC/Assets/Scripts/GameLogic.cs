@@ -8,10 +8,14 @@ public class GameLogic : MonoBehaviour
 {
     public static GameLogic instance;
     public float battery;
-    private int batteryLimit = 300;
+    public int batteryLimit = 300;
     private int newBattery;
     public Slider batteryBar;
     public Image batteryBarColor;
+
+    public int rustyGears;
+    public int normalGears;
+    public int stainlessGears;
 
     public GameObject loadingScreen;
     public Slider slider;
