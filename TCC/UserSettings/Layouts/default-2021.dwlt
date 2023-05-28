@@ -418,6 +418,7 @@ MonoBehaviour:
     m_ScaleWithWindow: 0
     m_HSlider: 0
     m_VSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -438,10 +439,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960
-      y: -643.7086
-      width: 1920
-      height: 1287.4172
+      x: -964.3316
+      y: -495.12033
+      width: 1928.6632
+      height: 984.01184
     m_MinimalGUI: 1
   m_defaultScale: 0.31458333
   m_LastWindowPixelSize: {x: 604, y: 426}
@@ -888,7 +889,7 @@ MonoBehaviour:
         m_UserData: 26246
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -1127,11 +1128,13 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
     - Assets/Scenes
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+  - Assets/Scenes
   - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Aluno\Documents\TCC\TCC
