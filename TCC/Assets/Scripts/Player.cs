@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
 
     public Animator anim;
 
+    public AudioSource shootSFX;
+
     void Update()
     {
         Move();
@@ -56,6 +58,7 @@ public class Player : MonoBehaviour
         JumpGravity();
 
         if(Input.GetButtonDown("Fire1")){
+            shootSFX.Play();
             Shoot();
         }
     }

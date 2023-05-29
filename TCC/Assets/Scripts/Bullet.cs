@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(bulletDamage);
         }
         
-        if(collider.gameObject.tag != "Battery" && collider.gameObject.tag != "Trigger"){
+        if(collider.gameObject.tag != "Collectable" && collider.gameObject.tag != "Trigger"){
             Destroy(gameObject);
         }
     }

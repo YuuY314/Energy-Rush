@@ -22,6 +22,8 @@ public class GameLogic : MonoBehaviour
     public Text progressText;
 
     public GameObject gameOverScreen;
+    
+    public AudioSource gearSFX;
 
     void Start()
     {

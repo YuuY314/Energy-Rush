@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeGear: normal
+  gearSFX: {fileID: 0}

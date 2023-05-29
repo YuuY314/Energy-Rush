@@ -115,3 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typeGear: rusty
+  gearSFX: {fileID: 0}

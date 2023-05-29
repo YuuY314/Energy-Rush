@@ -8,7 +8,8 @@ public class Gear : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player"){
+        if(collider.gameObject.tag == "Trigger"){
+            GameLogic.instance.gearSFX.Play();
             if(typeGear == "rusty"){
                 GameLogic.instance.rustyGears++;
             } else if(typeGear == "normal"){
