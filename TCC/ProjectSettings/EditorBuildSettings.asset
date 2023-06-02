@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave - Room 4.unity
     guid: 72cd9446780d9dc4097c32b0acafa9b7
   - enabled: 1
+    path: Assets/Scenes/Cave - Room 4 (Previous).unity
+    guid: 0d06f9e1669c39641baa41bff923f6a7
+  - enabled: 1
+    path: Assets/Scenes/Cave - Room 5.unity
+    guid: 3349b54e45fbe8d47be8104be79b3b85
+  - enabled: 1
     path: Assets/Scenes/End Screen.unity
     guid: 81ca26969b449ba4181d75550d2a2c1f
   m_configObjects: {}
