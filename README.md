@@ -3,7 +3,7 @@ Projeto de conclusão do curso técnico de informática.
 
 ## Membros
 Ao todo são 3 membros trabalhando no desenvolvimento.
-- João Henrique Viana (Kiwi_S0up)
+- João Henrique Viana (KiwiS0up)
 - Luan Francisco Gibson (luangib)
 - Rafael Yu (YuuY314)
 
