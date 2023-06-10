@@ -17,9 +17,9 @@ public class GameLogic : MonoBehaviour
     public int normalGears;
     public int stainlessGears;
 
-    public GameObject loadingScreen;
-    public Slider slider;
-    public Text progressText;
+    // public GameObject loadingScreen;
+    // public Slider slider;
+    // public Text progressText;
 
     public GameObject gameOverScreen;
     
@@ -32,6 +32,11 @@ public class GameLogic : MonoBehaviour
     }
 
     void Update()
+    {
+        UpdateBattery();
+    }
+
+    public void UpdateBattery()
     {
         if(battery > 0){
             battery -= Time.deltaTime;
@@ -67,19 +72,25 @@ public class GameLogic : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
-        StartCoroutine(LoadAsynchronously(levelName));
+        // StartCoroutine(LoadAsynchronously(levelName));
+        SceneManager.LoadScene(levelName);
     }
 
-    IEnumerator LoadAsynchronously(string levelName)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
-        loadingScreen.SetActive(true);
+    // IEnumerator LoadAsynchronously(string levelName)
+    // {
+    //     AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
+    //     loadingScreen.SetActive(true);
 
-        while(!operation.isDone){
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            slider.value = progress;
-            progressText.text = progress * 100 + "%";
-            yield return null;
-        }
+    //     while(!operation.isDone){
+    //         float progress = Mathf.Clamp01(operation.progress / .9f);
+    //         slider.value = progress;
+    //         progressText.text = progress * 100 + "%";
+    //         yield return null;
+    //     }
+    // }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

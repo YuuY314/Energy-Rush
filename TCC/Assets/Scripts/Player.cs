@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if(Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
+        if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)) && !isJumping){
             Crouch();
         } else {
             moveSpeed = baseSpeed;
