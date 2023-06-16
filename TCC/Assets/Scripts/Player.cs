@@ -10,13 +10,15 @@ public class Player : MonoBehaviour
     public float decceleration;
     public float velPower;
 
-    public float crouchSpeed;
     private bool isFacingRight = true;
+
+    public bool isCrouching;
+    public float crouchSpeed;
 
     // public float frictionAmount;
 
-    public float jumpForce;
     public bool isJumping;
+    public float jumpForce;  
     public float jumpCutMultiplier;
     public float gravityScale;
     public float fallGravityMultipler;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask ceilingLayer;
 
+    public bool isShooting;
     public Transform shootPoint;
     public GameObject bulletPrefab;
 
@@ -44,9 +47,11 @@ public class Player : MonoBehaviour
 
         if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)) && !isJumping){
             Crouch();
+            isCrouching = true;
         } else {
             moveSpeed = baseSpeed;
             bc.enabled = true;
+            isCrouching = false;
             anim.SetBool("Crouch", false);
         }
 
@@ -57,9 +62,32 @@ public class Player : MonoBehaviour
         OnJumpUp();
         JumpGravity();
 
-        if(Input.GetButtonDown("Fire1")){
+        if(Input.GetKeyDown(KeyCode.Space)){
             shootSFX.Play();
             Shoot();
+        } else {
+            isShooting = false;
+        }
+
+        // Shooting Animation
+        if(isShooting){
+            anim.SetBool("Idle Shoot", true);
+        } else {
+            anim.SetBool("Idle Shoot", false);
+        }
+
+        if(isJumping && isShooting){
+            anim.SetBool("Jump Shoot", true);
+            Debug.Log("Tá pulando atirando");
+        } else {
+            anim.SetBool("Jump Shoot", false);
+            Debug.Log("N tá pulando atirando");
+        }
+
+        if(isCrouching && isShooting){
+            anim.SetBool("Crouch Shoot", true);
+        } else {
+            anim.SetBool("Crouch Shoot", false);
         }
     }
 
@@ -134,6 +162,7 @@ public class Player : MonoBehaviour
 
     void Shoot()
     {
+        isShooting = true;
         Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
     }
 

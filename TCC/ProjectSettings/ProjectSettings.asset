@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Story Maker Studio
   productName: Energy Rush (Alpha)
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: e46b947119550034594d026b8d474f7d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896620442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.055, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.0676, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,9 +357,10 @@ MonoBehaviour:
   acceleration: 1
   decceleration: 1
   velPower: 1
+  isCrouching: 0
   crouchSpeed: 2
-  jumpForce: 8.5
   isJumping: 0
+  jumpForce: 8.5
   jumpCutMultiplier: 0.1
   gravityScale: 1
   fallGravityMultipler: 1.2

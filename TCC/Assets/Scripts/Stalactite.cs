@@ -11,9 +11,7 @@ public class Stalactite : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == 3){
-            rb.mass = 100;
-        }
+        rb.mass = 100;
     }
 
     void OnTriggerEnter2D(Collider2D collider)
