@@ -45,9 +45,8 @@ public class Player : MonoBehaviour
     {
         Move();
 
-        if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)) && !isJumping){
+        if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){
             Crouch();
-            isCrouching = true;
         } else {
             moveSpeed = baseSpeed;
             bc.enabled = true;
@@ -68,27 +67,7 @@ public class Player : MonoBehaviour
         } else {
             isShooting = false;
         }
-
-        // Shooting Animation
-        if(isShooting){
-            anim.SetBool("Idle Shoot", true);
-        } else {
-            anim.SetBool("Idle Shoot", false);
-        }
-
-        if(isJumping && isShooting){
-            anim.SetBool("Jump Shoot", true);
-            Debug.Log("Tá pulando atirando");
-        } else {
-            anim.SetBool("Jump Shoot", false);
-            Debug.Log("N tá pulando atirando");
-        }
-
-        if(isCrouching && isShooting){
-            anim.SetBool("Crouch Shoot", true);
-        } else {
-            anim.SetBool("Crouch Shoot", false);
-        }
+        VerifyShootingAnimation();
     }
 
     void Move()
@@ -115,12 +94,10 @@ public class Player : MonoBehaviour
 
     void Crouch()
     {
+        isCrouching = true;
         moveSpeed = crouchSpeed;
         bc.enabled = false;
         anim.SetBool("Crouch", true);
-        // if(Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, groundLayer)){
-
-        // }
     }
 
     void Jump()
@@ -166,6 +143,28 @@ public class Player : MonoBehaviour
         Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
     }
 
+    void VerifyShootingAnimation()
+    {
+        if(isShooting){
+            anim.SetBool("Idle Shoot", true);
+        } else {
+            anim.SetBool("Idle Shoot", false);
+        }
+
+        if(isJumping && isShooting){
+            anim.SetBool("Jump Shoot", true);
+            Debug.Log("Tá pulando atirando");
+        } else {
+            anim.SetBool("Jump Shoot", false);
+        }
+
+        if(isCrouching && isShooting){
+            anim.SetBool("Crouch Shoot", true);
+        } else {
+            anim.SetBool("Crouch Shoot", false);
+        }
+    }
+
     // void Friction()
     // {
     //     if(lastGroundedTime > 0 && Mathf.Abs(InputHandler.instance.MoveInput) < 0.01f){
@@ -180,4 +179,19 @@ public class Player : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.Rotate(0, 180, 0);
     }
+
+    // void OnApplicationFocus(bool focus)
+    // {
+    //     if(focus){
+    //         Cursor.lockState = CursorLockMode.Locked;
+    //     } else {
+    //         Cursor.lockState = CursorLockMode.None;
+    //     }
+    // // }
+
+    // static void OnBeforeSplashScreen()
+    // {
+    //     Cursor.lockState = CursorLockMode.Locked;
+    //     Cursor.visible = false;
+    // }
 }
