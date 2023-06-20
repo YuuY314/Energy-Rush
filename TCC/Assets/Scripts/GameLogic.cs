@@ -28,7 +28,11 @@ public class GameLogic : MonoBehaviour
     void Start()
     {
         instance = this;
-        battery = (float) batteryLimit;
+        battery = GameGlobalLogic.gBattery;
+        batteryLimit = GameGlobalLogic.gBatteryLimit;
+        rustyGears = GameGlobalLogic.gRustyGears;
+        normalGears = GameGlobalLogic.gNormalGears;
+        stainlessGears = GameGlobalLogic.gStainlessGears;
     }
 
     void Update()
@@ -73,6 +77,11 @@ public class GameLogic : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         // StartCoroutine(LoadAsynchronously(levelName));
+        GameGlobalLogic.gBattery = battery;
+        GameGlobalLogic.gBatteryLimit = batteryLimit;
+        GameGlobalLogic.gRustyGears = rustyGears;
+        GameGlobalLogic.gNormalGears = normalGears;
+        GameGlobalLogic.gStainlessGears = stainlessGears;
         SceneManager.LoadScene(levelName);
     }
 

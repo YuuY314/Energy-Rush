@@ -43,7 +43,7 @@ public class Rat : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject.tag != "Trigger" && collider.gameObject.tag != "Collectable"){
+        if(collider.gameObject.tag != "Trigger" && collider.gameObject.tag != "Collectable" && collider.gameObject.tag != "Projectile"){
             enemySpeed = -enemySpeed;
             Flip();
         }
