@@ -32007,14 +32007,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 829236659726511433, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 829236659726511434, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
       propertyPath: m_text
       value: Aperte A e S para andar
       objectReference: {fileID: 0}
     - target: {fileID: 829236659726511434, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 829236659726511434, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 829236659726511434, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 829236659726511435, guid: ce3d3553a87336542a18bc2d309a47a1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32226,6 +32238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1511265995, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3941607467058054703, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_Name
       value: HUD
