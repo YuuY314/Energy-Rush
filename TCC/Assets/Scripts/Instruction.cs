@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Tutorial : MonoBehaviour
+public class Instruction : MonoBehaviour
 {
     public TextMeshPro instruction;
     
@@ -11,7 +11,7 @@ public class Tutorial : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player"){
             instruction.enabled = true;
-        }
+        } 
     }
 
     void OnTriggerExit2D(Collider2D collider)

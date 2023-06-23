@@ -559,6 +559,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &811127258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1511265995, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 811127254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &896335086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6163,6 +6168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2029630606, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: shopScreen
+      value: 
+      objectReference: {fileID: 811127258}
     - target: {fileID: 887853375150672674, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: m_Name
       value: Vending Machine

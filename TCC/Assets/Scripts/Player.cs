@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     public Animator anim;
 
     public AudioSource shootSFX;
+    public AudioSource jumpSFX;
 
     void Update()
     {
@@ -108,6 +109,7 @@ public class Player : MonoBehaviour
             // lastJumpTime = 0;
             isJumping = true;
             anim.SetBool("Jump", true);
+            jumpSFX.Play();
             // jumpInputReleased = false;
         }
     }

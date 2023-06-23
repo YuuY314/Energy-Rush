@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
+  enemyEnergy: 10
 --- !u!114 &3020552566085127552
 MonoBehaviour:
   m_ObjectHideFlags: 0

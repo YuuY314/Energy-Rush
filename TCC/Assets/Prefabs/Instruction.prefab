@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 829236659726511435}
   - component: {fileID: 829236659726511436}
-  - component: {fileID: 829236659726511432}
   - component: {fileID: 829236659726511433}
   - component: {fileID: 829236659726511434}
-  - component: {fileID: -8755092771391907081}
+  - component: {fileID: 345979735254602282}
   m_Layer: 0
   m_Name: Instruction
   m_TagString: Trigger
@@ -67,19 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.1680775, y: 1.7027569}
   m_EdgeRadius: 0
---- !u!114 &829236659726511432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829236659726511437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab52c3625946954085ceb935c0c6d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instruction: {fileID: 829236659726511434}
 --- !u!23 &829236659726511433
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -214,7 +200,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 829236659726511433}
   m_maskType: 0
---- !u!114 &-8755092771391907081
+--- !u!114 &345979735254602282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,14 +209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 829236659726511437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07994bfe8b0e4adb97d706de5dea48d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 02ba09b94a17b224ebec0175fbdd0b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fontAsset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 0
-  m_renderer: {fileID: 829236659726511433}
-  m_TextComponent: {fileID: 0}
+  instruction: {fileID: 829236659726511434}
