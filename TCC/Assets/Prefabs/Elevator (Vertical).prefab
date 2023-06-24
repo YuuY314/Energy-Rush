@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7547806181828455967}
   - component: {fileID: 7547806181828455964}
   m_Layer: 3
-  m_Name: Elevator
+  m_Name: Elevator (Vertical)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,10 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57833e099d207104da6c6a088f34f1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elevatorSpeed: 0
+  type: Vertical
   rb: {fileID: 7547806181828455967}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
-  elevatorSpeed: 4
+  instructionBC: {fileID: 0}
 --- !u!1 &7547806181857513033
 GameObject:
   m_ObjectHideFlags: 0
