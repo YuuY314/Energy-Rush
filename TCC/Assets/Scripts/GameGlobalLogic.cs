@@ -9,4 +9,6 @@ public class GameGlobalLogic : MonoBehaviour
     public static int gRustyGears;
     public static int gNormalGears;
     public static int gStainlessGears;
+
+    public static bool gIsEquippedWithWeapon1;
 }

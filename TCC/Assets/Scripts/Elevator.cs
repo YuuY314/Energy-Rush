@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    private bool isVertical;
-    private bool isHorizontal;
+    public static Elevator instance;
+
+    public bool isVertical;
+    public bool isHorizontal;
 
     public float elevatorSpeed;
     public string type;
@@ -17,21 +19,20 @@ public class Elevator : MonoBehaviour
     
     public bool isGoingToStartPoint;
     public bool isGoingToEndPoint;
-    private bool isMoving;
+    public bool isMoving;
 
     public BoxCollider2D instructionBC;
 
     void Start()
     {
         VerticalOrHorizontal(type);
+        instance = this;
     }
 
     void FixedUpdate()
     {
         Move();
         HideInstruction();
-
-        Debug.Log(transform.position.x <= endPoint.position.x);
     }
 
     void OnTriggerStay2D(Collider2D collider)
@@ -61,7 +62,7 @@ public class Elevator : MonoBehaviour
         }
     }
     
-    void Move()
+    public void Move()
     {
         if(isVertical){
             if(isGoingToStartPoint){
@@ -123,6 +124,20 @@ public class Elevator : MonoBehaviour
             isVertical = true;
         } else if(type == "Horizontal"){
             isHorizontal = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player"){
+            collision.gameObject.transform.SetParent(transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player"){
+            collision.gameObject.transform.SetParent(null);
         }
     }
 }

@@ -21775,21 +21775,9 @@ PrefabInstance:
       value: Game Logic
       objectReference: {fileID: 0}
     - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: batteryBar
       value: 
       objectReference: {fileID: 1449070769}
-    - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: progressText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: loadingScreen
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: gameOverScreen
       value: 
@@ -21800,17 +21788,6 @@ PrefabInstance:
       objectReference: {fileID: 1449070768}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
---- !u!114 &1069254069 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-  m_PrefabInstance: {fileID: 1069254068}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7143dd94c07e3d4eb64f624551c7f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1092061801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8583713995269233496, guid: 13efb4ab6be1e4e4191ad2f6e3f01695, type: 3}
@@ -22011,10 +21988,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3941607466948852412, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Cave - Room 1 (Previous)
-      objectReference: {fileID: 0}
     - target: {fileID: 3941607467058054703, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -22110,22 +22083,6 @@ PrefabInstance:
     - target: {fileID: 3941607467366490066, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1069254069}
-    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Cave - Room 1 (Previous)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}

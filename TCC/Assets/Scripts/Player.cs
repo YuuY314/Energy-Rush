@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask ceilingLayer;
 
+    public bool isEquippedWithWeapon1;
     public bool isShooting;
     public Transform shootPoint;
     public GameObject bulletPrefab;
@@ -41,6 +42,11 @@ public class Player : MonoBehaviour
 
     public AudioSource shootSFX;
     public AudioSource jumpSFX;
+
+    void Start()
+    {
+        isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
+    }
 
     void Update()
     {
@@ -62,7 +68,7 @@ public class Player : MonoBehaviour
         OnJumpUp();
         JumpGravity();
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space) && isEquippedWithWeapon1){
             shootSFX.Play();
             Shoot();
         } else {

@@ -413,6 +413,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3941607466880796836, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3941607466948852412, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Cave - Room 3
@@ -513,6 +517,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 219203267}
+    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Cave - Room 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
 --- !u!1 &219203264 stripped
@@ -540,6 +556,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &219203267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3941607467058054704, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 219203263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202b4edf3eeb17d4594116bc249713c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &270068044
@@ -1065,9 +1092,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 10
-    m_Data: {fileID: 11400000, guid: f386c374a556d1f4db3c995290a76ca5, type: 2}
+    m_Data: {fileID: 11400000, guid: a1ffaa6b708d172429a67669d2ba8e73, type: 2}
   - m_RefCount: 5
-    m_Data: {fileID: 11400000, guid: a20756a1f012c7d42a8be2e135c5a335, type: 2}
+    m_Data: {fileID: 11400000, guid: 5466a4fe38cbba74d8e3e9002d6a03a5, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -1120,9 +1147,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 10
-    m_Data: {fileID: -328176290, guid: 33bd47f6014911243aa96ae29c8366ba, type: 3}
+    m_Data: {fileID: 1102163766, guid: 6f597c0a75e6cf040b12b4fd7bbbdc4d, type: 3}
   - m_RefCount: 5
-    m_Data: {fileID: 820568554, guid: 33bd47f6014911243aa96ae29c8366ba, type: 3}
+    m_Data: {fileID: -1453802551, guid: 6f597c0a75e6cf040b12b4fd7bbbdc4d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 15
     m_Data:
@@ -1940,8 +1967,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Energy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6847123061489290978, guid: c978fe2d40c93aa488acbbbbcb2b2d34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c978fe2d40c93aa488acbbbbcb2b2d34, type: 3}
+--- !u!1 &649281645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7125101458630828156, guid: c978fe2d40c93aa488acbbbbcb2b2d34, type: 3}
+  m_PrefabInstance: {fileID: 649281644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &649281646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649281645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1102df6353a35584098826f5993cc5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyGained: 50
 --- !u!4 &649642427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9131396712464028023, guid: e5e09a0c2c8ae6f46a7d78e7a484bc73, type: 3}
@@ -15795,9 +15841,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 3
-    m_Data: {fileID: 11400000, guid: a20756a1f012c7d42a8be2e135c5a335, type: 2}
+    m_Data: {fileID: 11400000, guid: 5466a4fe38cbba74d8e3e9002d6a03a5, type: 2}
   - m_RefCount: 3
-    m_Data: {fileID: 11400000, guid: 33962c5b28925ac41907bec812afb14b, type: 2}
+    m_Data: {fileID: 11400000, guid: ec3f990f5158ef04a9ac8b350384816e, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -15850,9 +15896,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 3
-    m_Data: {fileID: 820568554, guid: 33bd47f6014911243aa96ae29c8366ba, type: 3}
+    m_Data: {fileID: -1453802551, guid: 6f597c0a75e6cf040b12b4fd7bbbdc4d, type: 3}
   - m_RefCount: 3
-    m_Data: {fileID: 164209985, guid: 33bd47f6014911243aa96ae29c8366ba, type: 3}
+    m_Data: {fileID: -2018191299, guid: 6f597c0a75e6cf040b12b4fd7bbbdc4d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 6
     m_Data:
