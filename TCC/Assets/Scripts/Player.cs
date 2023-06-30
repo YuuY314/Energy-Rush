@@ -43,13 +43,10 @@ public class Player : MonoBehaviour
     public AudioSource shootSFX;
     public AudioSource jumpSFX;
 
-    void Start()
-    {
-        isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
-    }
-
     void Update()
     {
+        isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
+        
         Move();
 
         if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){

@@ -26,6 +26,7 @@ public class GameLogic : MonoBehaviour
     
     public AudioSource gearSFX;
     public AudioSource batterySFX;
+    public AudioSource itemSFX;
     public AudioSource gameOverSFX;
 
     void Start()
@@ -63,7 +64,7 @@ public class GameLogic : MonoBehaviour
             }
         } else {
             gameOverScreen.SetActive(true);
-            isGameOver = true;
+            // isGameOver = true;
         }
     }
 
