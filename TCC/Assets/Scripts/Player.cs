@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Walk")]
     public float baseSpeed;
     public float moveSpeed;
-    public float acceleration;
-    public float decceleration;
-    public float velPower;
+    // public float acceleration;
+    // public float decceleration;
+    // public float velPower;
 
     private bool isFacingRight = true;
 
+    [Header("Crouch")]
     public bool isCrouching;
     public float crouchSpeed;
 
     // public float frictionAmount;
 
+    [Header("Jump")]
     public bool isJumping;
     public float jumpForce;  
     public float jumpCutMultiplier;
     public float gravityScale;
     public float fallGravityMultipler;
 
+    [Header("Components")]
     public Transform tf;
     public Rigidbody2D rb;
     public BoxCollider2D bc;
@@ -33,13 +37,16 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask ceilingLayer;
 
+    [Header("Attack")]
     public bool isEquippedWithWeapon1;
     public bool isShooting;
     public Transform shootPoint;
     public GameObject bulletPrefab;
 
+    [Header("Animation")]
     public Animator anim;
 
+    [Header("SFX")]
     public AudioSource shootSFX;
     public AudioSource jumpSFX;
 
