@@ -14,6 +14,10 @@ public class DialogueManager : MonoBehaviour
     private string[] sentences;
     private int index;
 
+    public static bool hasDialogue = true;
+
+    public Player player;
+
     public void Dialogue(Sprite profile, string actorName, string[] txt)
     {
         dialogueBox.SetActive(true);
@@ -42,6 +46,8 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.text = "";
                 index = 0;
                 dialogueBox.SetActive(false);
+                hasDialogue = false;
+                player.enabled = true;
             }
         }
     }

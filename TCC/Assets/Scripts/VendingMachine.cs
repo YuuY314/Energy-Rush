@@ -6,12 +6,22 @@ public class VendingMachine : MonoBehaviour
 {
     public GameObject shopScreen;
 
+    public Player player;
+
+    private bool hasDialogue;
+
+    void Update()
+    {
+        hasDialogue = DialogueManager.hasDialogue;
+    }
+
     void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player"){
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetKeyDown(KeyCode.E) && !hasDialogue){
                 Time.timeScale = 0;
                 shopScreen.SetActive(true);
+                player.enabled = false;
             }
         }
     }
@@ -20,5 +30,6 @@ public class VendingMachine : MonoBehaviour
     {
         Time.timeScale = 1;
         shopScreen.SetActive(false);
+        player.enabled = true;
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1956462169460261479}
   - component: {fileID: 2029630603}
   - component: {fileID: 2029630606}
+  - component: {fileID: 2029630607}
   m_Layer: 0
   m_Name: Vending Machine
   m_TagString: Collectable
@@ -126,6 +127,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopScreen: {fileID: 0}
+  player: {fileID: 0}
+--- !u!114 &2029630607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887853375150672674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d163f9feffc6b4842851e51088c7e32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 21300000, guid: 59fac9f254d91f34d87042dc40b62447, type: 3}
+  actorName: "M\xE1quina de Vendas"
+  dialogueText: []
+  onTriggerArea: 0
+  hasStartedDialogue: 0
+  player: {fileID: 0}
+  dm: {fileID: 0}
 --- !u!1001 &1199878376
 PrefabInstance:
   m_ObjectHideFlags: 0

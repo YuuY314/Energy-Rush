@@ -123,11 +123,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &264506403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1013971719, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 811127254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &332283810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
   m_PrefabInstance: {fileID: 1482172906208910581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &332283814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1482172906769842972, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
+  m_PrefabInstance: {fileID: 1482172906208910581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae2e8c97d303ee4ea951dcf44146dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &350437941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,6 +151,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 332283814}
+    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 264506403}
+    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 974430414}
+    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: actorNameText
+      value: 
+      objectReference: {fileID: 1995101927}
+    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: profilePicture
+      value: 
+      objectReference: {fileID: 592135066}
     - target: {fileID: 1847362103109483168, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -354,6 +390,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &592135066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 711847562, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 811127254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &605817367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+  m_PrefabInstance: {fileID: 350437941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4694f871b30cd42ae13bb42bde9c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &649642427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9131396712464028023, guid: e5e09a0c2c8ae6f46a7d78e7a484bc73, type: 3}
@@ -5683,6 +5741,17 @@ CompositeCollider2D:
       - {x: -11.5, y: 3.4999704}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &974430414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1532729500, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 811127254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1361081952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6192,6 +6261,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995101927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2031586939, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 811127254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2029630601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6203,6 +6283,26 @@ PrefabInstance:
       propertyPath: shopScreen
       value: 
       objectReference: {fileID: 811127258}
+    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: dm
+      value: 
+      objectReference: {fileID: 605817367}
+    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 332283814}
+    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: dialogueText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: dialogueText.Array.data[0]
+      value: "Oh! Voc\xEA voltou!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
+      propertyPath: dialogueText.Array.data[1]
+      value: Trouxe mais engrenagens para mim?
+      objectReference: {fileID: 0}
     - target: {fileID: 887853375150672674, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: m_Name
       value: Vending Machine
@@ -6271,6 +6371,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482172906208910584, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_RootOrder
       value: 1

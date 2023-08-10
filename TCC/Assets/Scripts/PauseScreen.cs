@@ -9,6 +9,8 @@ public class PauseScreen : MonoBehaviour
 
     public GameObject pauseScreen;
 
+    public Player player;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -25,6 +27,7 @@ public class PauseScreen : MonoBehaviour
         pauseScreen.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
+        player.enabled = true;
     }
 
     void Pause()
@@ -32,6 +35,7 @@ public class PauseScreen : MonoBehaviour
         pauseScreen.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;
+        player.enabled = false;
     }
 
     public void LoadLevel(string levelName)
