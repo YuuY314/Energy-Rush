@@ -504,6 +504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 3941607467058054704, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 332283814}
     - target: {fileID: 3941607467058054707, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_Pivot.x
       value: 0

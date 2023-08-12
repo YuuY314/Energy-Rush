@@ -25,6 +25,10 @@ public class DialogueManager : MonoBehaviour
         actorNameText.text = actorName;
         sentences = txt;
         StartCoroutine(TypeSentence());
+
+        if(actorName == "Máquina de Vendas"){
+            RandomVoiceLineVendingMachine();
+        }
     }
 
     IEnumerator TypeSentence()
@@ -42,6 +46,7 @@ public class DialogueManager : MonoBehaviour
                 index++;
                 dialogueText.text = "";
                 StartCoroutine(TypeSentence());
+                RandomVoiceLineVendingMachine();
             } else {
                 dialogueText.text = "";
                 index = 0;
@@ -49,6 +54,17 @@ public class DialogueManager : MonoBehaviour
                 hasDialogue = false;
                 player.enabled = true;
             }
+        }
+    }
+
+    private void RandomVoiceLineVendingMachine()
+    {
+        int sort = Random.Range(1, 100);
+        Debug.Log(sort);
+        if(sort <= 50){
+            GameLogic.instance.vendingMachineVoice1.Play();
+        } else {
+            GameLogic.instance.vendingMachineVoice2.Play();
         }
     }
 }

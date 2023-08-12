@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
+    [Header("Energy")]
     public static GameLogic instance;
     public float battery;
     public int batteryLimit = 300;
@@ -13,6 +14,7 @@ public class GameLogic : MonoBehaviour
     public Slider batteryBar;
     public Image batteryBarColor;
 
+    [Header("Gears")]
     public int rustyGears;
     public int normalGears;
     public int stainlessGears;
@@ -21,13 +23,20 @@ public class GameLogic : MonoBehaviour
     // public Slider slider;
     // public Text progressText;
 
+    [Header("Game Over")]
     public GameObject gameOverScreen;
     public bool isGameOver;
     
+    [Header("SFX")]
     public AudioSource gearSFX;
     public AudioSource batterySFX;
     public AudioSource itemSFX;
     public AudioSource gameOverSFX;
+    public AudioSource wallDestructionSFX;
+
+    [Header("Voices")]
+    public AudioSource vendingMachineVoice1;
+    public AudioSource vendingMachineVoice2;
 
     void Start()
     {

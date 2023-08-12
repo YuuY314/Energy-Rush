@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     {
         enemyHealth -= damage;
         if(enemyHealth <= 0){
+            if(gameObject.tag == "Breakable"){
+                GameLogic.instance.wallDestructionSFX.Play();
+            }
             Destroy(gameObject);
         }
     }

@@ -23,15 +23,6 @@ public class Dialogue : MonoBehaviour
         } else if(Input.GetKey(KeyCode.E) && onTriggerArea && hasStartedDialogue){
             dm.NextSentence();
         }
-
-        if(gameObject.tag == "Player"){
-            if(!hasStartedDialogue){
-                Interact();
-                hasStartedDialogue = true;
-            } else if(Input.GetKey(KeyCode.E) && hasStartedDialogue) {
-                dm.NextSentence();
-            }
-        }
     }
 
     public void Interact()
