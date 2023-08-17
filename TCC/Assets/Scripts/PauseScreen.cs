@@ -13,7 +13,7 @@ public class PauseScreen : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetButtonDown("Pause")){
             if(gameIsPaused){
                 Resume();
             } else {

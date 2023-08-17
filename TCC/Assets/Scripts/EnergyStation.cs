@@ -9,7 +9,7 @@ public class EnergyStation : MonoBehaviour
     void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player"){
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetButtonDown("Interact")){
                 GameLogic.instance.battery = GameLogic.instance.batteryLimit;
                 rechargeSFX.Play();
             }

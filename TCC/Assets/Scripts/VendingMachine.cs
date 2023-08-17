@@ -18,7 +18,7 @@ public class VendingMachine : MonoBehaviour
     void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player"){
-            if(Input.GetKeyDown(KeyCode.E) && !hasDialogue){
+            if(Input.GetButtonDown("Interact") && !hasDialogue){
                 Time.timeScale = 0;
                 shopScreen.SetActive(true);
                 player.enabled = false;

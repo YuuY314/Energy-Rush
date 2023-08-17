@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         
         Move();
 
-        if((Input.GetKey(KeyCode.S) || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){
+        if((Input.GetButton("Crouch") || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){
             Crouch();
         } else {
             moveSpeed = baseSpeed;
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         OnJumpUp();
         JumpGravity();
 
-        if(Input.GetKeyDown(KeyCode.Space) && isEquippedWithWeapon1){
+        if(Input.GetButtonDown("Fire1") && isEquippedWithWeapon1){
             shootSFX.Play();
             Shoot();
         } else {

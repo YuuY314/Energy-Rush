@@ -40,20 +40,20 @@ public class Elevator : MonoBehaviour
         if(collider.gameObject.tag == "Player"){
             if(!isMoving){
                 if(isVertical){
-                    if(Input.GetKeyDown(KeyCode.E) && transform.position.y == startPoint.position.y){
+                    if(Input.GetButtonDown("Interact") && transform.position.y == startPoint.position.y){
                         isGoingToStartPoint = true;
                         isMoving = true;
-                    } else if(Input.GetKeyDown(KeyCode.E) && transform.position.y == endPoint.position.y){
+                    } else if(Input.GetButtonDown("Interact") && transform.position.y == endPoint.position.y){
                         isGoingToEndPoint = true;
                         isMoving = true;
                     }
                 }
 
                 if(isHorizontal){
-                    if(Input.GetKeyDown(KeyCode.E) && transform.position.x == startPoint.position.x){
+                    if(Input.GetButtonDown("Interact") && transform.position.x == startPoint.position.x){
                         isGoingToStartPoint = true;
                         isMoving = true;
-                    } else if(Input.GetKeyDown(KeyCode.E) && transform.position.x == endPoint.position.x){
+                    } else if(Input.GetButtonDown("Interact") && transform.position.x == endPoint.position.x){
                         isGoingToEndPoint = true;
                         isMoving = true;
                     }

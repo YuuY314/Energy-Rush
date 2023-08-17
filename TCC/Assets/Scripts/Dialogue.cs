@@ -15,12 +15,12 @@ public class Dialogue : MonoBehaviour
 
     public DialogueManager dm;
 
-    void FixedUpdate()
+    void Update()
     {
-        if(Input.GetKey(KeyCode.E) && onTriggerArea && !hasStartedDialogue){
+        if(Input.GetButtonDown("Interact") && onTriggerArea && !hasStartedDialogue){
             Interact();
             hasStartedDialogue = true;
-        } else if(Input.GetKey(KeyCode.E) && onTriggerArea && hasStartedDialogue){
+        } else if(Input.GetButtonDown("Interact") && onTriggerArea && hasStartedDialogue){
             dm.NextSentence();
         }
     }
