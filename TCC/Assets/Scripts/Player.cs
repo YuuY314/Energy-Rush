@@ -7,9 +7,7 @@ public class Player : MonoBehaviour
     [Header("Walk")]
     public float baseSpeed;
     public float moveSpeed;
-    // public float acceleration;
-    // public float decceleration;
-    // public float velPower;
+    public bool isWalking = false;
 
     private bool isFacingRight = true;
 
@@ -83,23 +81,19 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        // movimentação básica (sem aceleração)
         float moveDirection = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
-
-        // ainda pensando se precisa mesmo de aceleração
-
-        // float moveDirection = Input.GetAxis("Horizontal");
-        // float targetSpeed = moveDirection * moveSpeed;
-        // float speedDif = targetSpeed - rb.velocity.x;
-        // float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration;
-        // float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
-        // rb.AddForce(movement * Vector2.right);
 
         if(moveDirection > 0 && !isFacingRight){
             Flip();
         } else if(moveDirection < 0 && isFacingRight){
             Flip();
+        }
+
+        if(Input.GetAxis("Horizontal") == 0){
+            anim.SetBool("Walk", false);
+        } else {
+            anim.SetBool("Walk", true);
         }
     }
 
