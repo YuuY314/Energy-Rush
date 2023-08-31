@@ -46,6 +46,7 @@ public class GameLogic : MonoBehaviour
         rustyGears = GameGlobalLogic.gRustyGears;
         normalGears = GameGlobalLogic.gNormalGears;
         stainlessGears = GameGlobalLogic.gStainlessGears;
+        UpdateBattery();
     }
 
     void Update()

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2983046411448555897}
   - component: {fileID: 5544099664353641730}
   - component: {fileID: 503223382}
+  - component: {fileID: 195680419}
   m_Layer: 6
   m_Name: Bat (Vertical)
   m_TagString: Enemy
@@ -172,3 +173,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 2
+--- !u!95 &195680419
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8990563132700408366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7afd490af4b335140bf865510047bc83, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
