@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 33bd47f6014911243aa96ae29c8366ba
+guid: 6f597c0a75e6cf040b12b4fd7bbbdc4d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,6 +102,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -117,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Tilemap_0
+      name: Breakable Tilemap_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b43a56ea33d5524394b0ecf109f8fb7
-      internalID: -967235351
+      spriteID: 00b5593f8445d0a49b1e3160d304df01
+      internalID: -1604965024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_1
+      name: Breakable Tilemap_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 575cd4b89a8bff846ab5723e9fbba1f5
-      internalID: -115155137
+      spriteID: 90ac48298018714428793d935d86ca28
+      internalID: 796737610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_2
+      name: Breakable Tilemap_2
       rect:
         serializedVersion: 2
         x: 32
@@ -173,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa237da359573044f9aa34e5d33d112c
-      internalID: 1620263120
+      spriteID: 598a394f698508c45a39cfb174c725b2
+      internalID: 519516321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_3
+      name: Breakable Tilemap_3
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d25eb7d6e5ae6b04093ddda6eb7dbb0c
-      internalID: 164209985
+      spriteID: 28d760a611b7718499ab1bd6328096a1
+      internalID: -2018191299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_4
+      name: Breakable Tilemap_4
       rect:
         serializedVersion: 2
         x: 16
@@ -215,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91287a31c46dec44bbb3e7cc8299a349
-      internalID: -328176290
+      spriteID: 407b6df2dcc919d4681bfa821f12e120
+      internalID: 1102163766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_5
+      name: Breakable Tilemap_5
       rect:
         serializedVersion: 2
         x: 32
@@ -236,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce43aaf8771829409c6bc1cf434f45e
-      internalID: 820568554
+      spriteID: 236a019286083f04297b42a91027772c
+      internalID: -1453802551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_6
+      name: Breakable Tilemap_6
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b24b228be738bd240b36efe487373317
-      internalID: 795945265
+      spriteID: 307fbe209befe6644b57b0a3fcd18dc8
+      internalID: 1812155973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_7
+      name: Breakable Tilemap_7
       rect:
         serializedVersion: 2
         x: 16
@@ -278,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce7f5f601b876ae4b938423a046ec14d
-      internalID: -1864221430
+      spriteID: ce1755f942660354c96228db5b71f23f
+      internalID: 614375585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Tilemap_8
+      name: Breakable Tilemap_8
       rect:
         serializedVersion: 2
         x: 32
@@ -299,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2313c8333a1fd44cb531943ff5dd189
-      internalID: -1673847790
+      spriteID: 44dbb4054b647d9439e65dc9dcb370ac
+      internalID: 226290810
       vertices: []
       indices: 
       edges: []
@@ -316,15 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Tilemap_0: -967235351
-      New Tilemap_1: -115155137
-      New Tilemap_2: 1620263120
-      New Tilemap_3: 164209985
-      New Tilemap_4: -328176290
-      New Tilemap_5: 820568554
-      New Tilemap_6: 795945265
-      New Tilemap_7: -1864221430
-      New Tilemap_8: -1673847790
+      Breakable Tilemap_0: -1604965024
+      Breakable Tilemap_1: 796737610
+      Breakable Tilemap_2: 519516321
+      Breakable Tilemap_3: -2018191299
+      Breakable Tilemap_4: 1102163766
+      Breakable Tilemap_5: -1453802551
+      Breakable Tilemap_6: 1812155973
+      Breakable Tilemap_7: 614375585
+      Breakable Tilemap_8: 226290810
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
