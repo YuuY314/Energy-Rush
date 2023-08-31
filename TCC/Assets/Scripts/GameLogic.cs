@@ -50,7 +50,7 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        UpdateBattery();
+        // UpdateBattery();
     }
 
     public void UpdateBattery()

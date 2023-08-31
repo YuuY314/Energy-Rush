@@ -84,6 +84,10 @@ public class Player : MonoBehaviour
         float moveDirection = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
 
+        if(Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0){
+            GameLogic.instance.UpdateBattery();
+        }
+
         if(moveDirection > 0 && !isFacingRight){
             Flip();
         } else if(moveDirection < 0 && isFacingRight){
