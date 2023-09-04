@@ -10,5 +10,5 @@ public class GameGlobalLogic : MonoBehaviour
     public static int gNormalGears;
     public static int gStainlessGears;
 
-    public static bool gIsEquippedWithWeapon1;
+    public static bool gIsEquippedWithWeapon1 = true; //sempre true enquanto estiver em desenvolvimento
 }

@@ -148,11 +148,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57833e099d207104da6c6a088f34f1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elevatorSpeed: 0
+  isVertical: 0
+  isHorizontal: 0
+  elevatorSpeed: 2
   type: Horizontal
   rb: {fileID: 7547806181828455967}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
+  isGoingToStartPoint: 0
+  isGoingToEndPoint: 0
+  isMoving: 0
   instructionBC: {fileID: 0}
 --- !u!1 &7547806181857513033
 GameObject:

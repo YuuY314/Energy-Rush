@@ -61,16 +61,17 @@ public class GameLogic : MonoBehaviour
             newBattery = (int) battery;
             UpdateBatteryBar();
 
-            Color green = new Color(0f, 1f, 0f, 1f);
-            Color yellow = new Color(1f, 0.92f, 0.016f, 1f);
-            Color red = new Color(1f, 0f, 0f, 1f);
+
+            Color normal = new Color(0f, 0.9921569f, 1f, 1f);
+            Color warn = new Color(0.7333333f, 0.9294118f, 0f, 1f);
+            Color danger = new Color(0.8352941f, 0f, 0f, 1f);
 
             if(battery > (0.75 * batteryLimit) && battery < (1 * batteryLimit)){
-                batteryBarColor.color = green;
+                batteryBarColor.color = normal;
             } else if(battery > (0.25f * batteryLimit) && battery < (0.75f * batteryLimit)){
-                batteryBarColor.color = yellow;
+                batteryBarColor.color = warn;
             } else if(battery > (0.01f * batteryLimit) && battery < (0.25f * batteryLimit)) {
-                batteryBarColor.color = red;
+                batteryBarColor.color = danger;
             }
         } else {
             gameOverScreen.SetActive(true);

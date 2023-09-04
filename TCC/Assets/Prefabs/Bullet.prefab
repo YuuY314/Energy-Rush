@@ -148,5 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   bulletDamage: 1
-  energyCost: 5
+  energyCost: 2
   rb: {fileID: 8685951726590049245}

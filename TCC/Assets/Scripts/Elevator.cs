@@ -29,7 +29,7 @@ public class Elevator : MonoBehaviour
         instance = this;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Move();
         HideInstruction();
