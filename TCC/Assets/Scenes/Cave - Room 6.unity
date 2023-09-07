@@ -19788,11 +19788,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9131396712464028018, guid: e5e09a0c2c8ae6f46a7d78e7a484bc73, type: 3}
       propertyPath: levelToGo
-      value: Cave - Room 2 (Previous)
+      value: Cave - Room 5
       objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028019, guid: e5e09a0c2c8ae6f46a7d78e7a484bc73, type: 3}
       propertyPath: m_Name
-      value: Previous Level (Room 2)
+      value: Previous Level (Room 5)
       objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028019, guid: e5e09a0c2c8ae6f46a7d78e7a484bc73, type: 3}
       propertyPath: m_IsActive
