@@ -19,7 +19,9 @@ public class Player : MonoBehaviour
 
     [Header("Jump")]
     public bool isJumping;
-    public float jumpForce;  
+    public float jumpForce;
+    [SerializeField] private float coyoteTime = 0.5f;
+    [SerializeField] private float coyoteTimeCounter;
     public float jumpCutMultiplier;
     public float gravityScale;
     public float fallGravityMultipler;
@@ -53,20 +55,23 @@ public class Player : MonoBehaviour
         isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
         
         Move();
+        Crouch();
 
-        if((Input.GetButton("Crouch") || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){
-            Crouch();
-        } else {
-            moveSpeed = baseSpeed;
-            bc.enabled = true;
-            isCrouching = false;
-            anim.SetBool("Crouch", false);
-        }
-
-        if(Input.GetButtonDown("Jump") && !isJumping && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
+        if(Input.GetButtonDown("Jump")){
             Jump();
             isJumping = false;
         }
+
+        if(IsGrounded()){
+            coyoteTimeCounter = coyoteTime;
+        } else {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if(Input.GetButtonUp("Jump")){
+            coyoteTimeCounter = 0f;
+        }
+
         OnJumpUp();
         JumpGravity();
 
@@ -103,22 +108,40 @@ public class Player : MonoBehaviour
 
     void Crouch()
     {
-        isCrouching = true;
-        moveSpeed = crouchSpeed;
-        bc.enabled = false;
-        anim.SetBool("Crouch", true);
+        if((Input.GetButton("Crouch") || Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer))){
+            isCrouching = true;
+            moveSpeed = crouchSpeed;
+            bc.enabled = false;
+            anim.SetBool("Crouch", true);
+        } else {
+            moveSpeed = baseSpeed;
+            bc.enabled = true;
+            isCrouching = false;
+            anim.SetBool("Crouch", false);
+        }
     }
 
     void Jump()
     {
-        if(Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer)){
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            // lastGroundedTime = 0;
-            // lastJumpTime = 0;
+        if(coyoteTimeCounter > 0f){
+            if(Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer)){
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            } else {
+                rb.AddForce(Vector2.up * (jumpForce+0.5f), ForceMode2D.Impulse);
+            }
+            
             isJumping = true;
             anim.SetBool("Jump", true);
             jumpSFX.Play();
-            // jumpInputReleased = false;
+        }
+    }
+
+    bool IsGrounded()
+    {
+        if(Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer)){
+            return true;
+        } else {
+            return false;
         }
     }
 
