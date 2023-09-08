@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stalactite : MonoBehaviour
 {
     public float fallSpeed;
+    public float beforeFallTime = 0.5f;
     public Rigidbody2D rb;
     public BoxCollider2D bc;
     public BoxCollider2D bcTrigger;
@@ -17,8 +18,13 @@ public class Stalactite : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player"){
-            rb.gravityScale = 1;
-            rb.velocity = -transform.up * fallSpeed;
+            Invoke("Falling", beforeFallTime);
         }
+    }
+
+    void Falling()
+    {
+        rb.gravityScale = 1;
+        rb.velocity = -transform.up * fallSpeed;
     }
 }

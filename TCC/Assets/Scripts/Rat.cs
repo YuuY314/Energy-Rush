@@ -6,8 +6,6 @@ public class Rat : MonoBehaviour
 {
     public float enemySpeed;
     private bool isFacingRight = true;
-
-    public BoxCollider2D bc;
     public Rigidbody2D rb;
     public Transform headPoint;
 
