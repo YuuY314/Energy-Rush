@@ -332,10 +332,15 @@ MonoBehaviour:
   rustyGears: 0
   normalGears: 0
   stainlessGears: 0
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  isGameOver: 0
+  gearSFX: {fileID: 0}
+  batterySFX: {fileID: 0}
+  itemSFX: {fileID: 0}
+  gameOverSFX: {fileID: 0}
+  wallDestructionSFX: {fileID: 0}
+  vendingMachineVoice1: {fileID: 0}
+  vendingMachineVoice2: {fileID: 0}
 --- !u!1 &768454104
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +434,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Cave - Level 1
+          m_StringArgument: Start Screen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &768454107

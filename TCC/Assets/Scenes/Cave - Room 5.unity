@@ -52229,6 +52229,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 760387905}
     m_Modifications:
+    - target: {fileID: 9131396712464028018, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
+      propertyPath: levelToGo
+      value: Cave - Room 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028019, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_Name
       value: Next Level (Room 6)

@@ -69,9 +69,9 @@ GameObject:
   - component: {fileID: 5387758449241247898}
   - component: {fileID: 5862852513970028181}
   - component: {fileID: 1898490794356665856}
-  - component: {fileID: 2869923236385817923}
   - component: {fileID: 1568243478}
   - component: {fileID: 1568243480}
+  - component: {fileID: 2994387405855215897}
   m_Layer: 0
   m_Name: Blue Slime
   m_TagString: Untagged
@@ -168,40 +168,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &2869923236385817923
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964269861400475866}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.0002169609, y: 0.06741381}
-      - {x: -0.027334534, y: 0.05455794}
-      - {x: -0.07996759, y: 0.009388901}
-      - {x: -0.08048114, y: -0.04763986}
-      - {x: -0.039967593, y: -0.079453856}
-      - {x: 0.09712589, y: -0.079453856}
-      - {x: 0.12048115, y: -0.059213288}
-      - {x: 0.12150873, y: 0.016580053}
-      - {x: 0.048602216, y: 0.067399256}
 --- !u!114 &1568243478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +197,19 @@ MonoBehaviour:
   jumpForce: 5
   isGrounded: 0
   rb: {fileID: 1898490794356665856}
+--- !u!58 &2994387405855215897
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964269861400475866}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.021914937, y: -0.015653998}
+  serializedVersion: 2
+  m_Radius: 0.09581802

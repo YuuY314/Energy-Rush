@@ -12,6 +12,7 @@ public class EnergyStation : MonoBehaviour
             if(Input.GetButtonDown("Interact")){
                 GameLogic.instance.battery = GameLogic.instance.batteryLimit;
                 rechargeSFX.Play();
+                GameLogic.instance.UpdateBattery();
             }
         }
     }

@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 4.5
+  beforeFallTime: 0.3
   rb: {fileID: 596768971}
   bc: {fileID: 523644426515580731}
   bcTrigger: {fileID: 4394194566868574964}

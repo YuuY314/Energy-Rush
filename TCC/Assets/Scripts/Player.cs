@@ -7,15 +7,13 @@ public class Player : MonoBehaviour
     [Header("Walk")]
     public float baseSpeed;
     public float moveSpeed;
-    public bool isWalking = false;
+    public bool isWalking;
 
     private bool isFacingRight = true;
 
     [Header("Crouch")]
     public bool isCrouching;
     public float crouchSpeed;
-
-    // public float frictionAmount;
 
     [Header("Jump")]
     public bool isJumping;
@@ -57,7 +55,7 @@ public class Player : MonoBehaviour
         Move();
         Crouch();
 
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
             Jump();
             isJumping = false;
         }
@@ -91,6 +89,9 @@ public class Player : MonoBehaviour
 
         if(Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0){
             GameLogic.instance.UpdateBattery();
+            isWalking = true;
+        } else {
+            isWalking = false;
         }
 
         if(moveDirection > 0 && !isFacingRight){
@@ -124,7 +125,7 @@ public class Player : MonoBehaviour
     void Jump()
     {
         if(coyoteTimeCounter > 0f){
-            if(Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer)){
+            if(IsGrounded()){
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             } else {
                 rb.AddForce(Vector2.up * (jumpForce+0.5f), ForceMode2D.Impulse);
@@ -198,33 +199,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    // void Friction()
-    // {
-    //     if(lastGroundedTime > 0 && Mathf.Abs(InputHandler.instance.MoveInput) < 0.01f){
-    //         float amount = Mathf.Min(Mathf.Abs(rb.velocity.x), Mathf.Abs(frictionAmount));
-    //         amount *= Mathf.Sign(rb.velocity.x);
-    //         rb.AddForce(Vector2.right * -amount, ForceMode2D.Impulse);
-    //     }
-    // }
-
     void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0, 180, 0);
     }
-
-    // void OnApplicationFocus(bool focus)
-    // {
-    //     if(focus){
-    //         Cursor.lockState = CursorLockMode.Locked;
-    //     } else {
-    //         Cursor.lockState = CursorLockMode.None;
-    //     }
-    // // }
-
-    // static void OnBeforeSplashScreen()
-    // {
-    //     Cursor.lockState = CursorLockMode.Locked;
-    //     Cursor.visible = false;
-    // }
 }
