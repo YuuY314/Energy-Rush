@@ -48,7 +48,7 @@ MonoBehaviour:
   profilePicture: {fileID: 0}
   actorNameText: {fileID: 0}
   dialogueText: {fileID: 0}
-  typingSpeed: 0.05
+  typingSpeed: 0.08
   player: {fileID: 0}
 --- !u!1 &1328693722
 GameObject:
@@ -814,6 +814,8 @@ MonoBehaviour:
   rustyGears: 0
   normalGears: 0
   stainlessGears: 0
+  transition: {fileID: 0}
+  transitionTime: 1
   gameOverScreen: {fileID: 0}
   isGameOver: 0
   gearSFX: {fileID: 1328693726}

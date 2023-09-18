@@ -20,14 +20,23 @@ public class Bat : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
 
+    private GameObject target;
+
     void Start()
     {
         VerticalOrHorizontal(type);
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()
     {
         Move();
+        
+        if(target.transform.position.x < transform.position.x && isFacingRight){
+            Flip();
+        } else if(target.transform.position.x > transform.position.x && !isFacingRight){
+            Flip();
+        }
     }
 
     void Move()
@@ -64,11 +73,11 @@ public class Bat : MonoBehaviour
         }
     }
 
-    // void Flip()
-    // {
-    //     isFacingRight = !isFacingRight;
-    //     transform.Rotate(0, 180, 0);
-    // }
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0, 180, 0);
+    }
 
     // void OnTriggerExit2D(Collider2D collider)
     // {

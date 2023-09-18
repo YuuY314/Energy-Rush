@@ -698,6 +698,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &603385775 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 481004299, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
+  m_PrefabInstance: {fileID: 3941607467949464130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &614578918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1007,11 +1012,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4541122624991642799, guid: 7b2a9c5d17b6d2c45ab877659dd27a8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.63
+      value: -33.25
       objectReference: {fileID: 0}
     - target: {fileID: 4541122624991642799, guid: 7b2a9c5d17b6d2c45ab877659dd27a8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.18
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 4541122624991642799, guid: 7b2a9c5d17b6d2c45ab877659dd27a8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22203,10 +22208,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3941607467949464135}
     - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: typingSpeed
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 3941607467949464133}
@@ -22271,9 +22272,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 598480544}
     - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 603385775}
+    - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1079153382}
+    - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
+      propertyPath: transitionTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1847362103109483171, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: batteryBarColor
       value: 
@@ -32403,10 +32412,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3941607466948852412, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Cave - Room 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3941607467058054703, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -32506,10 +32511,6 @@ PrefabInstance:
     - target: {fileID: 3941607467366490066, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941607467911222931, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Cave - Room 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}

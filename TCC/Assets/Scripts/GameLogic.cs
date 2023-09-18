@@ -98,7 +98,7 @@ public class GameLogic : MonoBehaviour
         GameGlobalLogic.gRustyGears = rustyGears;
         GameGlobalLogic.gNormalGears = normalGears;
         GameGlobalLogic.gStainlessGears = stainlessGears;
-        SceneManager.LoadScene(levelName);
+        StartCoroutine(LevelTransition.instance.Transition(levelName));
     }
 
     // IEnumerator LoadAsynchronously(string levelName)
