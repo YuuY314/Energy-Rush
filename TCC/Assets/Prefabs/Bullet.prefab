@@ -150,3 +150,4 @@ MonoBehaviour:
   bulletDamage: 1
   energyCost: 2
   rb: {fileID: 8685951726590049245}
+  go: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
