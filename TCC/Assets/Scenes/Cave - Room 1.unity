@@ -1107,21 +1107,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Next Level (Room 2)
       objectReference: {fileID: 0}
-    - target: {fileID: 9131396712464028020, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fbd700ffc00136944bddc1ee4b6d6d32, type: 3}
     - target: {fileID: 9131396712464028023, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028023, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9131396712464028023, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4707196
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028023, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_LocalPosition.y
