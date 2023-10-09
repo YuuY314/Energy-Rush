@@ -183,4 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db15605bd67b52a4c9dad83705a99bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToGo: Cave - Room 3
+  levelToGo: 
