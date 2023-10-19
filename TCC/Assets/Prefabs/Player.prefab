@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896620443}
   m_Layer: 0
-  m_Name: Shoot Point
+  m_Name: Shoot Point (Original)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,6 +61,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1482172906769842968}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1378391251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378391252}
+  m_Layer: 0
+  m_Name: Shoot Point (Current)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378391252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378391251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482172906769842968}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571029006
 GameObject:
@@ -223,6 +254,8 @@ Transform:
   - {fileID: 896620443}
   - {fileID: 1184821726}
   - {fileID: 1571029007}
+  - {fileID: 1843365241606475950}
+  - {fileID: 1378391252}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -355,10 +388,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSpeed: 5
   moveSpeed: 5
+  isWalking: 0
   isCrouching: 0
   crouchSpeed: 2
   isJumping: 0
   jumpForce: 8.5
+  coyoteTime: 0.5
+  coyoteTimeCounter: 0
   jumpCutMultiplier: 0.1
   gravityScale: 1
   fallGravityMultipler: 1.2
@@ -377,7 +413,9 @@ MonoBehaviour:
     m_Bits: 64
   isEquippedWithWeapon1: 0
   isShooting: 0
-  shootPoint: {fileID: 896620443}
+  currentShootPoint: {fileID: 1378391252}
+  originalShootPoint: {fileID: 896620443}
+  crouchShootPoint: {fileID: 1843365241606475950}
   bulletPrefab: {fileID: 2857918430125847128, guid: cbe5a187b7dc2e241b1f28788292d252, type: 3}
   anim: {fileID: 1412105810}
   shootSFX: {fileID: 1652127685}
@@ -595,3 +633,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &6992900382086880263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1843365241606475950}
+  m_Layer: 0
+  m_Name: Shoot Point (Crouch)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1843365241606475950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992900382086880263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: -0.095, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482172906769842968}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

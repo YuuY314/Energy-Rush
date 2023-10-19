@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 3020552566085127552}
   m_Layer: 0
   m_Name: Rat Fighter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 5
-  enemyEnergy: 10
 --- !u!114 &3020552566085127552
 MonoBehaviour:
   m_ObjectHideFlags: 0

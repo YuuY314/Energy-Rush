@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 8583713995269233476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.94, y: -0.56, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 4.7, y: 4.7, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8583713993444900766}
@@ -193,7 +193,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0013615787, y: -0.008733589}
+  m_Offset: {x: -0.0013615787, y: -0.0056870785}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -204,7 +204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23926967, y: 0.07304546}
+  m_Size: {x: 0.23926967, y: 0.07913847}
   m_EdgeRadius: 0
 --- !u!50 &8583713995269233477
 Rigidbody2D:
@@ -240,7 +240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 2
-  bc: {fileID: 8583713993444900767}
   rb: {fileID: 8583713995269233477}
   headPoint: {fileID: 658148191}
 --- !u!114 &8583713995269233502
@@ -256,7 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
-  enemyEnergy: 5
 --- !u!95 &1068299669
 Animator:
   serializedVersion: 5

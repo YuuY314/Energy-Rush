@@ -16,4 +16,15 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player"){
+            if(collision.transform.position.x <= transform.position.x){
+                Player.instance.knockbackToTheRight = true;
+            } else if(collision.transform.position.x > transform.position.x){
+                Player.instance.knockbackToTheRight = false;
+            }
+        }
+    }
 }

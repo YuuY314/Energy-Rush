@@ -38,8 +38,16 @@ public class Player : MonoBehaviour
     [Header("Attack")]
     public bool isEquippedWithWeapon1;
     public bool isShooting;
-    public Transform shootPoint;
+    public Transform currentShootPoint;
+    public Transform originalShootPoint;
+    public Transform crouchShootPoint;
     public GameObject bulletPrefab;
+
+    [Header("Damage")]
+    public bool knockbackToTheRight;
+    public float knockbackTime;
+    public float knockbackTimer;
+    public float knockbackForce;
 
     [Header("Animation")]
     public Animator anim;
@@ -48,11 +56,22 @@ public class Player : MonoBehaviour
     public AudioSource shootSFX;
     public AudioSource jumpSFX;
 
+    public static Player instance;
+
+    void Start()
+    {
+        currentShootPoint.position = new Vector2(originalShootPoint.position.x, originalShootPoint.position.y);
+        instance = this;
+    }
+
     void Update()
     {
         isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
         
-        Move();
+        if(knockbackTimer <= 0){
+            Move();
+            knockbackTimer = knockbackTime;
+        }
         Crouch();
 
         if(Input.GetButtonDown("Jump") && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
@@ -80,6 +99,7 @@ public class Player : MonoBehaviour
             isShooting = false;
         }
         VerifyShootingAnimation();
+        CrouchShoot();
     }
 
     void Move()
@@ -153,6 +173,20 @@ public class Player : MonoBehaviour
             isJumping = false;
             anim.SetBool("Jump", false);
         }
+
+        if(collision.gameObject.tag == "Enemy"){
+            if(knockbackTimer <= 0){
+                knockbackTimer = knockbackTime;
+            } else {
+                if(knockbackToTheRight){
+                    rb.velocity = new Vector2(-knockbackForce, knockbackForce);
+                } else {
+                    rb.velocity = new Vector2(knockbackForce, knockbackForce);
+                }
+            }
+
+            knockbackTimer -= Time.deltaTime;
+        }
     }
 
     void OnJumpUp()
@@ -174,7 +208,17 @@ public class Player : MonoBehaviour
     void Shoot()
     {
         isShooting = true;
-        Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+        Instantiate(bulletPrefab, currentShootPoint.position, currentShootPoint.rotation);
+    }
+
+    void CrouchShoot()
+    {
+        if(isCrouching && isShooting){
+            Debug.Log("tá atirando agachado");
+            currentShootPoint.position = new Vector2(crouchShootPoint.position.x, crouchShootPoint.position.y);
+        } else if(!isCrouching) {
+            currentShootPoint.position = new Vector2(originalShootPoint.position.x, originalShootPoint.position.y);
+        }
     }
 
     void VerifyShootingAnimation()
@@ -190,6 +234,12 @@ public class Player : MonoBehaviour
             Debug.Log("Tá pulando atirando");
         } else {
             anim.SetBool("Jump Shoot", false);
+        }
+
+        if(isCrouching && isWalking){
+            anim.SetBool("Crouch Walk", true);
+        } else {
+            anim.SetBool("Crouch Walk", false);
         }
 
         if(isCrouching && isShooting){
