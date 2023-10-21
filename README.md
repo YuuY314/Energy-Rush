@@ -1,6 +1,9 @@
 # TCC
 Projeto de conclusão do curso técnico de informática.
 
+## Download do Jogo (em desenvolvimento)
+Link para a Game Jolt: https://gamejolt.com/games/energy_rush/817734
+
 ## Membros
 Ao todo são 3 membros trabalhando no desenvolvimento.
 - João Henrique Viana (KiwiS0up)
