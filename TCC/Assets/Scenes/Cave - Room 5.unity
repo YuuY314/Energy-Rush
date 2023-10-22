@@ -54131,11 +54131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.65
+      value: -16.28
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.36
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54168,18 +54168,6 @@ PrefabInstance:
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482172906769842972, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
-      propertyPath: knockbackTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482172906769842972, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
-      propertyPath: knockbackForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482172906769842972, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
-      propertyPath: knockbackTimer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842973, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_Name

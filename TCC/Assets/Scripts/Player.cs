@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
     public GameObject bulletPrefab;
 
     [Header("Damage")]
-    public bool knockbackToTheRight;
+    public bool isKnockbacked;
+    public bool isKnockbackedToTheRight;
     public float knockbackTime;
     public float knockbackTimer;
     public float knockbackForce;
@@ -68,9 +69,15 @@ public class Player : MonoBehaviour
     {
         isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
         
-        if(knockbackTimer <= 0){
+        if(knockbackTimer > 0 && !isKnockbacked){
             Move();
             knockbackTimer = knockbackTime;
+        } else {
+            knockbackTimer -= Time.deltaTime;
+            if(knockbackTimer <= 0){
+                isKnockbacked = false;
+                knockbackTimer = knockbackTime;
+            }
         }
         Crouch();
 
@@ -175,17 +182,11 @@ public class Player : MonoBehaviour
         }
 
         if(collision.gameObject.tag == "Enemy"){
-            if(knockbackTimer <= 0){
-                knockbackTimer = knockbackTime;
+            if(isKnockbackedToTheRight){
+                rb.velocity = new Vector2(-knockbackForce, knockbackForce * 1.5f);
             } else {
-                if(knockbackToTheRight){
-                    rb.velocity = new Vector2(-knockbackForce, knockbackForce);
-                } else {
-                    rb.velocity = new Vector2(knockbackForce, knockbackForce);
-                }
+                rb.velocity = new Vector2(knockbackForce, knockbackForce * 1.5f);
             }
-
-            knockbackTimer -= Time.deltaTime;
         }
     }
 

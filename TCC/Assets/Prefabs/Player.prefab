@@ -417,6 +417,11 @@ MonoBehaviour:
   originalShootPoint: {fileID: 896620443}
   crouchShootPoint: {fileID: 1843365241606475950}
   bulletPrefab: {fileID: 2857918430125847128, guid: cbe5a187b7dc2e241b1f28788292d252, type: 3}
+  isKnockbacked: 0
+  isKnockbackedToTheRight: 0
+  knockbackTime: 0.8
+  knockbackTimer: 0.8
+  knockbackForce: 5
   anim: {fileID: 1412105810}
   shootSFX: {fileID: 1652127685}
   jumpSFX: {fileID: 2104312728}

@@ -21,10 +21,11 @@ public class Enemy : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player"){
             if(collision.transform.position.x <= transform.position.x){
-                Player.instance.knockbackToTheRight = true;
+                Player.instance.isKnockbackedToTheRight = true;
             } else if(collision.transform.position.x > transform.position.x){
-                Player.instance.knockbackToTheRight = false;
+                Player.instance.isKnockbackedToTheRight = false;
             }
+            Player.instance.isKnockbacked = true;
         }
     }
 }
