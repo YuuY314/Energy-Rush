@@ -248,6 +248,12 @@ public class Player : MonoBehaviour
         } else {
             anim.SetBool("Crouch Shoot", false);
         }
+
+        if(isKnockbacked){
+            anim.SetBool("Hit", true);
+        } else {
+            anim.SetBool("Hit", false);
+        }
     }
 
     void Flip()
