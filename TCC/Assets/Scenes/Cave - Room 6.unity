@@ -2411,7 +2411,7 @@ GameObject:
   - component: {fileID: 486310949}
   m_Layer: 3
   m_Name: Fragile (3)
-  m_TagString: Untagged
+  m_TagString: Fragile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2446,6 +2446,7 @@ MonoBehaviour:
   breakingTime: 0.5
   respawnTime: 1
   fragile: {fileID: 486310947}
+  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!66 &486310950
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -39273,7 +39274,7 @@ GameObject:
   - component: {fileID: 1225382046}
   m_Layer: 3
   m_Name: Fragile
-  m_TagString: Untagged
+  m_TagString: Fragile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39640,6 +39641,7 @@ MonoBehaviour:
   breakingTime: 0.5
   respawnTime: 1
   fragile: {fileID: 1225382039}
+  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!1001 &1264267193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40631,7 +40633,7 @@ GameObject:
   - component: {fileID: 1648763454}
   m_Layer: 3
   m_Name: Fragile (2)
-  m_TagString: Untagged
+  m_TagString: Fragile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40666,6 +40668,7 @@ MonoBehaviour:
   breakingTime: 0.5
   respawnTime: 1
   fragile: {fileID: 1648763452}
+  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!66 &1648763455
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -41457,7 +41460,7 @@ GameObject:
   - component: {fileID: 1919401922}
   m_Layer: 3
   m_Name: Fragile (1)
-  m_TagString: Untagged
+  m_TagString: Fragile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41834,6 +41837,7 @@ MonoBehaviour:
   breakingTime: 0.5
   respawnTime: 1
   fragile: {fileID: 1919401914}
+  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!1 &1926618878
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ TagManager:
   - Collectable
   - Projectile
   - Breakable
+  - Fragile
   layers:
   - Default
   - TransparentFX

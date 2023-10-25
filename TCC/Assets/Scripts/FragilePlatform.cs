@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FragilePlatform : MonoBehaviour
 {
-    public float breakingTime = 1.2f;
-    public float respawnTime = 1;
+    public float breakingTime;
+    public float respawnTime;
 
     public GameObject fragile;
+    public GameObject particles;
 
     void OnDisable()
     {
@@ -18,6 +19,8 @@ public class FragilePlatform : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player"){
             Invoke("Break", breakingTime);
+            Vector2 pos = collision.contacts[0].point;
+            Instantiate(particles, pos, Quaternion.identity);
         }
     }
 

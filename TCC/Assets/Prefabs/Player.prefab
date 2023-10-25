@@ -425,6 +425,7 @@ MonoBehaviour:
   anim: {fileID: 1412105810}
   shootSFX: {fileID: 1652127685}
   jumpSFX: {fileID: 2104312728}
+  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!95 &1412105810
 Animator:
   serializedVersion: 5

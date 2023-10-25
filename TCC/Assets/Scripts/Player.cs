@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
     public AudioSource shootSFX;
     public AudioSource jumpSFX;
 
+    [Header("Other")]
     public static Player instance;
 
     void Start()
