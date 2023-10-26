@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player"){
+        if(collision.gameObject.tag == "Player" && gameObject.tag == "Enemy"){
             if(collision.transform.position.x <= transform.position.x){
                 Player.instance.isKnockbackedToTheRight = true;
             } else if(collision.transform.position.x > transform.position.x){

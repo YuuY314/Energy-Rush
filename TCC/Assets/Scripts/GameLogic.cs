@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameLogic : MonoBehaviour
 {
     [Header("Energy")]
-    public static GameLogic instance;
     public float battery;
     public int batteryLimit = 300;
     private int newBattery;
+    public int batteryBackup;
     public Slider batteryBar;
     public Image batteryBarColor;
+    public Text batteryBackupCounter;
 
     [Header("Gears")]
     public int rustyGears;
@@ -38,20 +39,24 @@ public class GameLogic : MonoBehaviour
     public AudioSource vendingMachineVoice1;
     public AudioSource vendingMachineVoice2;
 
+    [Header("Other")]
+    public static GameLogic instance;
+
+    void Awake()
+    {
+        batteryBackupCounter = GameObject.Find("HUD/Energy Condition/Battery/Battery Counter").GetComponent<Text>();
+    }
+
     void Start()
     {
         instance = this;
         battery = GameGlobalLogic.gBattery;
         batteryLimit = GameGlobalLogic.gBatteryLimit;
+        batteryBackup = GameGlobalLogic.gBatteryBackup;
         rustyGears = GameGlobalLogic.gRustyGears;
         normalGears = GameGlobalLogic.gNormalGears;
         stainlessGears = GameGlobalLogic.gStainlessGears;
         UpdateBattery();
-    }
-
-    void Update()
-    {
-        // UpdateBattery();
     }
 
     public void UpdateBattery()
@@ -60,7 +65,6 @@ public class GameLogic : MonoBehaviour
             battery -= Time.deltaTime;
             newBattery = (int) battery;
             UpdateBatteryBar();
-
 
             Color normal = new Color(0f, 0.9921569f, 1f, 1f);
             Color warn = new Color(0.7333333f, 0.9294118f, 0f, 1f);
@@ -73,9 +77,13 @@ public class GameLogic : MonoBehaviour
             } else if(battery > (0.01f * batteryLimit) && battery < (0.25f * batteryLimit)) {
                 batteryBarColor.color = danger;
             }
+
+            batteryBackupCounter.text = batteryBackup.ToString();
+        } else if(battery <= 0 && batteryBackup > 0) {
+            battery = batteryLimit;
+            batteryBackup--;
         } else {
             gameOverScreen.SetActive(true);
-            // isGameOver = true;
         }
     }
 
@@ -95,6 +103,7 @@ public class GameLogic : MonoBehaviour
         // StartCoroutine(LoadAsynchronously(levelName));
         GameGlobalLogic.gBattery = battery;
         GameGlobalLogic.gBatteryLimit = batteryLimit;
+        GameGlobalLogic.gBatteryBackup = batteryBackup;
         GameGlobalLogic.gRustyGears = rustyGears;
         GameGlobalLogic.gNormalGears = normalGears;
         GameGlobalLogic.gStainlessGears = stainlessGears;

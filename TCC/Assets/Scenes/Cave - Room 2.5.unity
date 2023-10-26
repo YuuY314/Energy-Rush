@@ -1540,7 +1540,7 @@ Transform:
   m_Children:
   - {fileID: 506329203}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835004038
 GameObject:
@@ -1608,7 +1608,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919550008
 GameObject:
@@ -2148,6 +2148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 10
+  enemyDamage: 0
 --- !u!1 &2052846907
 GameObject:
   m_ObjectHideFlags: 0
@@ -39138,6 +39139,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 760387905}
     m_Modifications:
+    - target: {fileID: 9131396712464028018, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
+      propertyPath: levelToGo
+      value: Cave - Room 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028019, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_Name
       value: Next Level (Room 3)

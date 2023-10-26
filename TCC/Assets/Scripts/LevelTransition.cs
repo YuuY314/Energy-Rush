@@ -7,6 +7,7 @@ public class LevelTransition : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime;
+    public float transitionTimeFadeOut;
     public static LevelTransition instance;
 
     void Start()
@@ -16,14 +17,15 @@ public class LevelTransition : MonoBehaviour
 
     public IEnumerator Transition(string levelName)
     {
-        transition.SetTrigger("Start");
+        transition.SetBool("Start", true);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelName);
     }
 
-    public IEnumerator Transition()
-    {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionTime);
-    }
+    // public IEnumerator Transition()
+    // {
+    //     transition.SetBool("Start", true);
+    //     yield return new WaitForSeconds(transitionTimeFadeOut);
+    //     transition.SetBool("Start", false);
+    // }
 }

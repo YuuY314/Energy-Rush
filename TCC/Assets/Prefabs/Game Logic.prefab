@@ -809,13 +809,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battery: 0
   batteryLimit: 300
+  batteryBackup: 0
   batteryBar: {fileID: 0}
   batteryBarColor: {fileID: 0}
+  batteryBackupCounter: {fileID: 0}
   rustyGears: 0
   normalGears: 0
   stainlessGears: 0
-  transition: {fileID: 0}
-  transitionTime: 1
   gameOverScreen: {fileID: 0}
   isGameOver: 0
   gearSFX: {fileID: 1328693726}

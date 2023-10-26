@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Jump", false);
         }
 
-        if(collision.gameObject.tag == "Enemy"){
+        if(collision.gameObject.tag == "Enemy" ){
             if(isKnockbackedToTheRight){
                 rb.velocity = new Vector2(-knockbackForce, knockbackForce * 1.5f);
             } else {
