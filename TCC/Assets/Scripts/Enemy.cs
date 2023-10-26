@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int enemyHealth;
+    public float enemyDamage;
 
     public void TakeDamage(int damage)
     {
@@ -26,6 +27,8 @@ public class Enemy : MonoBehaviour
                 Player.instance.isKnockbackedToTheRight = false;
             }
             Player.instance.isKnockbacked = true;
+            GameLogic.instance.battery -= enemyDamage;
+            GameLogic.instance.UpdateBattery();
         }
     }
 }

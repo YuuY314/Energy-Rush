@@ -11,7 +11,9 @@ public class Spike : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player"){
             GameLogic.instance.battery -= energyCost;
+            GameLogic.instance.UpdateBattery();
             collision.gameObject.transform.position = new Vector2(checkpointArea.position.x, checkpointArea.position.y);
+            StartCoroutine(LevelTransition.instance.Transition());
         }
     }
 }

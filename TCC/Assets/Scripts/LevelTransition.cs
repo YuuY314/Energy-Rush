@@ -20,4 +20,10 @@ public class LevelTransition : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelName);
     }
+
+    public IEnumerator Transition()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+    }
 }

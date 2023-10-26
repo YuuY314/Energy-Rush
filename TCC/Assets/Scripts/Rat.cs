@@ -25,19 +25,19 @@ public class Rat : MonoBehaviour
         transform.Rotate(0, 180, 0);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player"){
-            float height = collision.contacts[0].point.y - headPoint.position.y;
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if(collision.gameObject.tag == "Player"){
+    //         float height = collision.contacts[0].point.y - headPoint.position.y;
 
-            if(height > 0){
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 8.5f, ForceMode2D.Impulse);
-                Destroy(gameObject);
-            } else {
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 8.5f, ForceMode2D.Impulse);
-            }
-        }
-    }
+    //         if(height > 0){
+    //             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 8.5f, ForceMode2D.Impulse);
+    //             Destroy(gameObject);
+    //         } else {
+    //             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 8.5f, ForceMode2D.Impulse);
+    //         }
+    //     }
+    // }
 
     void OnTriggerExit2D(Collider2D collider)
     {
