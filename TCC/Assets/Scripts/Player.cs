@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         OnJumpUp();
         JumpGravity();
 
-        if(Input.GetButtonDown("Fire1") && isEquippedWithWeapon1){
+        if(Input.GetButtonDown("Fire1") && isEquippedWithWeapon1 && !isKnockbacked){
             shootSFX.Play();
             Shoot();
         } else {
