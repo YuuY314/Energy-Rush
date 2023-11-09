@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 9131396712464028021}
   - component: {fileID: 9131396712464028018}
   m_Layer: 0
-  m_Name: Next Level Horizontal
+  m_Name: Pass Level Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     public float gravityScale;
     public float fallGravityMultipler;
 
+    [Header("Double Jump")]
+    public bool isEquippedWithDoubleJump;
+    public bool isDoubleJumping;
+
     [Header("Components")]
     public Transform tf;
     public Rigidbody2D rb;
@@ -69,6 +73,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         isEquippedWithWeapon1 = GameGlobalLogic.gIsEquippedWithWeapon1;
+        isEquippedWithDoubleJump = GameGlobalLogic.gIsEquippedWithDoubleJump;
         
         if(knockbackTimer > 0 && !isKnockbacked){
             Move();
@@ -80,12 +85,9 @@ public class Player : MonoBehaviour
                 knockbackTimer = knockbackTime;
             }
         }
-        Crouch();
 
-        if(Input.GetButtonDown("Jump") && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
-            Jump();
-            isJumping = false;
-        }
+        Crouch();
+        Jump();
 
         if(IsGrounded()){
             coyoteTimeCounter = coyoteTime;
@@ -97,7 +99,7 @@ public class Player : MonoBehaviour
             coyoteTimeCounter = 0f;
         }
 
-        OnJumpUp();
+        // OnJumpUp();
         JumpGravity();
 
         if(Input.GetButtonDown("Fire1") && isEquippedWithWeapon1 && !isKnockbacked){
@@ -152,16 +154,25 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        if(coyoteTimeCounter > 0f){
-            if(IsGrounded()){
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            } else {
-                rb.AddForce(Vector2.up * (jumpForce+0.5f), ForceMode2D.Impulse);
+        if(Input.GetButtonDown("Jump") && !Physics2D.OverlapBox(cellingCheckPoint.position, cellingCheckSize, 0, ceilingLayer)){
+            if(coyoteTimeCounter > 0f){
+                if(!isJumping){
+                    if(IsGrounded()){
+                        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                    } else {
+                        rb.AddForce(new Vector2(0f, jumpForce+0.5f), ForceMode2D.Impulse);
+                    }
+
+                    anim.SetBool("Jump", true);
+                    jumpSFX.Play();
+                    isDoubleJumping = true;
+                }
+            } else if(isJumping){
+                if(isDoubleJumping && isEquippedWithDoubleJump){
+                    rb.AddForce(new Vector2(0f, jumpForce / 1.5f), ForceMode2D.Impulse);
+                    isDoubleJumping = false;
+                }
             }
-            
-            isJumping = true;
-            anim.SetBool("Jump", true);
-            jumpSFX.Play();
         }
     }
 
@@ -191,12 +202,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnJumpUp()
+    void OnCollisionExit2D(Collision2D collision)
     {
-        if(rb.velocity.y > 0 && isJumping){
-            rb.AddForce(Vector2.down * rb.velocity.y * (1 - jumpCutMultiplier), ForceMode2D.Impulse);
+        if(collision.gameObject.layer == 3){
+            isJumping = true;
         }
     }
+
+    // void OnJumpUp()
+    // {
+    //     if(rb.velocity.y > 0 && isJumping){
+    //         rb.AddForce(Vector2.down * rb.velocity.y * (1 - jumpCutMultiplier), ForceMode2D.Impulse);
+    //     }
+    // }
 
     void JumpGravity()
     {
@@ -216,7 +234,6 @@ public class Player : MonoBehaviour
     void CrouchShoot()
     {
         if(isCrouching && isShooting){
-            Debug.Log("tá atirando agachado");
             currentShootPoint.position = new Vector2(crouchShootPoint.position.x, crouchShootPoint.position.y);
         } else if(!isCrouching) {
             currentShootPoint.position = new Vector2(originalShootPoint.position.x, originalShootPoint.position.y);

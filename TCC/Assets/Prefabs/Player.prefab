@@ -326,7 +326,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 0
@@ -398,6 +398,8 @@ MonoBehaviour:
   jumpCutMultiplier: 0.1
   gravityScale: 1
   fallGravityMultipler: 1.2
+  isEquippedWithDoubleJump: 0
+  isDoubleJumping: 0
   tf: {fileID: 1482172906769842968}
   rb: {fileID: 1482172906769842974}
   bc: {fileID: 1482172906769842970}
@@ -407,7 +409,7 @@ MonoBehaviour:
   cellingCheckSize: {x: 0.7, y: 0.1}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   ceilingLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -425,7 +427,6 @@ MonoBehaviour:
   anim: {fileID: 1412105810}
   shootSFX: {fileID: 1652127685}
   jumpSFX: {fileID: 2104312728}
-  particles: {fileID: 7554200103599780674, guid: 7fec1873b5c65b84e92ba56f6d4a109f, type: 3}
 --- !u!95 &1412105810
 Animator:
   serializedVersion: 5
@@ -663,7 +664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6992900382086880263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.095, z: 0}
+  m_LocalPosition: {x: 0.15, y: -0.118, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

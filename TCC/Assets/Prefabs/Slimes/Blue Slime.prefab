@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2994387405855215897}
   m_Layer: 0
   m_Name: Blue Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 3
+  enemyDamage: 0
 --- !u!114 &1568243480
 MonoBehaviour:
   m_ObjectHideFlags: 0
