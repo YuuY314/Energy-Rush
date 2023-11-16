@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class ShopScreen : MonoBehaviour
 {
-    public Text rustyGearCounter;
-    public Text normalGearCounter;
-    public Text stainlessGearCounter;
+    public GameObject shopScreen;
 
-    void Start()
+    public void Exit()
     {
-        rustyGearCounter.text = GameGlobalLogic.gRustyGears.ToString();
-        normalGearCounter.text = GameGlobalLogic.gNormalGears.ToString();
-        stainlessGearCounter.text = GameGlobalLogic.gStainlessGears.ToString();
+        shopScreen.SetActive(false);
     }
 }
