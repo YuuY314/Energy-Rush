@@ -5,22 +5,24 @@ using UnityEngine;
 public class RatFighter : MonoBehaviour
 {
     public float enemySpeed;
-    public GameObject target;
+    // public GameObject target;
     private bool isFacingRight = true;
-
-    public CapsuleCollider2D cc;
     public Rigidbody2D rb;
-    
-    public bool isChasing = false;
+    public Animator anim;
+
+    [Header("Attack")]
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask playerLayer;
 
     void Update()
     {
-        if(target == null)
-            return;
+        // if(target == null)
+        //     return;
         Move();
-        if(isChasing){
-            Chase();
-        }
+        // if(isChasing){
+        //     Chase();
+        // }
     }
 
     void Move()
@@ -28,15 +30,31 @@ public class RatFighter : MonoBehaviour
         rb.velocity = new Vector2(enemySpeed, rb.velocity.y);
     }
 
-    void Chase()
+    void Attack()
     {
-        if(transform.position.x > target.transform.position.x && isFacingRight){
-            Flip();
-        } else if(transform.position.x < target.transform.position.x && !isFacingRight){
-            Flip();
+        anim.SetTrigger("Attack");
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        foreach(Collider2D player in hitPlayer){
+            Debug.Log("Teste");
         }
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
     }
+
+    void OnCollisionEnter2D(Collision2D collsion)
+    {
+        if(collsion.gameObject.tag == "Player"){
+            Attack();
+        }
+    }
+
+    // void Chase()
+    // {
+    //     if(transform.position.x > target.transform.position.x && isFacingRight){
+    //         Flip();
+    //     } else if(transform.position.x < target.transform.position.x && !isFacingRight){
+    //         Flip();
+    //     }
+    //     transform.position = Vector2.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
+    // }
 
     void OnTriggerExit2D(Collider2D collider)
     {

@@ -18076,10 +18076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1094712196}
     m_Modifications:
-    - target: {fileID: 3020552566085127552, guid: ad0b523110b8c5b4386a9720aeac6626, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1723123087}
     - target: {fileID: 3020552566085127553, guid: ad0b523110b8c5b4386a9720aeac6626, type: 3}
       propertyPath: m_Name
       value: Rat Fighter (1)

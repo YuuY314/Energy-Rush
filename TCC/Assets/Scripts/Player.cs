@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     {
         currentShootPoint.position = new Vector2(originalShootPoint.position.x, originalShootPoint.position.y);
         instance = this;
+        
     }
 
     void Update()
