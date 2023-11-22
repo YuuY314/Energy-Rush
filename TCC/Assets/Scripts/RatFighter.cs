@@ -30,22 +30,13 @@ public class RatFighter : MonoBehaviour
         rb.velocity = new Vector2(enemySpeed, rb.velocity.y);
     }
 
-    void Attack()
-    {
-        anim.SetTrigger("Attack");
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
-        foreach(Collider2D player in hitPlayer){
-            Debug.Log("Teste");
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D collsion)
     {
         if(collsion.gameObject.tag == "Player"){
-            Attack();
+            anim.SetTrigger("Attack");
         }
     }
-
+    
     // void Chase()
     // {
     //     if(transform.position.x > target.transform.position.x && isFacingRight){
@@ -64,7 +55,7 @@ public class RatFighter : MonoBehaviour
         }
     }
 
-    void Flip()
+    public void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0, 180, 0);

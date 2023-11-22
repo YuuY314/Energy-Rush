@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 185879312}
   - component: {fileID: 185879316}
   - component: {fileID: 185879317}
+  - component: {fileID: 185879318}
   m_Layer: 0
   m_Name: Rat King
   m_TagString: Enemy
@@ -233,7 +234,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2299ed064419ce94396f8a7f6c55e383, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -251,7 +252,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025090953, y: -0.024231832}
+  m_Offset: {x: 0.025090953, y: -0.16}
   serializedVersion: 2
   m_Radius: 0.14883137
 --- !u!212 &185879314
@@ -295,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0eaaa04f944eb744587653c6ed0e6af3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 106b84ad1a0aeb74793b2d28581e6114, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -314,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185879311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -3.42, z: 0}
+  m_LocalPosition: {x: -0.8, y: -3.02, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28f027c85c2f144698a8eab7513f459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 200
+  enemyHealth: 150
   enemyDamage: 10
 --- !u!114 &185879317
 MonoBehaviour:
@@ -348,8 +349,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6850272cb224241bcc7ef94e9c6883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 5
+  isFacingRight: 1
   rb: {fileID: 185879312}
+  anim: {fileID: 185879318}
+  enemy: {fileID: 185879316}
+  maxHealth: 10
+--- !u!95 &185879318
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185879311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b6adecce68531a4688418e221d1015f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &332283810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
@@ -11051,7 +11076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026801761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.166, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

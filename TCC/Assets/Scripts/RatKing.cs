@@ -4,31 +4,57 @@ using UnityEngine;
 
 public class RatKing : MonoBehaviour
 {
-    public float enemySpeed;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     public Rigidbody2D rb;
+    public Animator anim;
+    public Enemy enemy;
+    public int maxHealth;
+
+    public static RatKing instance;
+
+    private GameObject target;
+
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player");
+        enemy.enemyHealth = maxHealth;
+    }
 
     void Update()
     {
-        Move();
+        if(enemy.enemyHealth <= maxHealth / 2){
+            anim.SetBool("Roll", true);
+        }
     }
 
-    void Move()
+    public void LookAtPlayer()
     {
-        rb.velocity = new Vector2(enemySpeed, rb.velocity.y);
+        if(target.transform.position.x < transform.position.x && isFacingRight){
+            Flip();
+        } else if(target.transform.position.x > transform.position.x && !isFacingRight){
+            Flip();
+        }
     }
 
-    void Flip()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0, 180, 0);
+        if(collision.gameObject.tag == "Player"){
+            anim.SetTrigger("Attack");
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
         if(collider.gameObject.tag != "Trigger" && collider.gameObject.tag != "Collectable" && collider.gameObject.tag != "Projectile"){
-            enemySpeed = -enemySpeed;
+            RatKingRoll.instance.speed = -RatKingRoll.instance.speed;
             Flip();
         }
+    }
+
+
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0, 180, 0);
     }
 }
