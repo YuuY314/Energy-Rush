@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
+        bulletDamage = GameGlobalLogic.gBulletDamage;
         rb.velocity = transform.right * bulletSpeed;
         GameLogic.instance.battery -= energyCost;
         GameLogic.instance.UpdateBattery();

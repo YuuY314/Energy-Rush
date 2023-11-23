@@ -59,6 +59,12 @@ public class GameLogic : MonoBehaviour
         UpdateBattery();
     }
 
+    void Update()
+    {
+        batteryBackup = GameGlobalLogic.gBatteryBackup;
+        batteryBackupCounter.text = batteryBackup.ToString();
+    }
+
     public void UpdateBattery()
     {
         if(battery > 0){
@@ -81,7 +87,7 @@ public class GameLogic : MonoBehaviour
             batteryBackupCounter.text = batteryBackup.ToString();
         } else if(battery <= 0 && batteryBackup > 0) {
             battery = batteryLimit;
-            batteryBackup--;
+            GameGlobalLogic.gBatteryBackup--;
         } else {
             gameOverScreen.SetActive(true);
         }

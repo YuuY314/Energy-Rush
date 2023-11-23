@@ -14,9 +14,19 @@ public class DialogueManager : MonoBehaviour
     private string[] sentences;
     private int index;
 
-    public static bool hasDialogue = true;
+    public static bool hasDialogue;
 
-    public Player player;
+    private Player player;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
+
+    void Update()
+    {
+        Debug.Log(hasDialogue);
+    }
 
     public void Dialogue(Sprite profile, string actorName, string[] txt)
     {
@@ -52,6 +62,7 @@ public class DialogueManager : MonoBehaviour
                 index = 0;
                 dialogueBox.SetActive(false);
                 hasDialogue = false;
+                Debug.Log(hasDialogue);
                 player.enabled = true;
             }
         }
@@ -60,7 +71,6 @@ public class DialogueManager : MonoBehaviour
     private void RandomVoiceLineVendingMachine()
     {
         int sort = Random.Range(1, 100);
-        Debug.Log(sort);
         if(sort <= 50){
             GameLogic.instance.vendingMachineVoice1.Play();
         } else {

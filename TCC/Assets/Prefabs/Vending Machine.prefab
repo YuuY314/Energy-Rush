@@ -142,7 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profile: {fileID: 21300000, guid: 59fac9f254d91f34d87042dc40b62447, type: 3}
   actorName: "M\xE1quina de Vendas"
-  dialogueText: []
+  dialogueText:
+  - Ah! Uma alma viva aqui nas profundezas!
+  - "Sabe, eu estou precisando de umas engrenagens... Mas, eu n\xE3o consigo andar
+    por a\xED que nem voc\xEA, rob\xF4zinho."
+  - Tem algumas engrenagens para me ajudar?
   onTriggerArea: 0
   hasStartedDialogue: 0
   player: {fileID: 0}

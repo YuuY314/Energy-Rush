@@ -34,6 +34,7 @@ public class BossRoomLogic : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(ratKing, spawnPoint.transform.position, Quaternion.identity);
+        // Instantiate(ratKing, spawnPoint.transform.position, Quaternion.identity);
+        ratKing.SetActive(true);
     }
 }

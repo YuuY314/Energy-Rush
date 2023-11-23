@@ -404,7 +404,7 @@ MonoBehaviour:
   rb: {fileID: 1482172906769842974}
   bc: {fileID: 1482172906769842970}
   groundCheckPoint: {fileID: 1482172906126098774}
-  groundCheckSize: {x: 0.4, y: 0.1}
+  groundCheckSize: {x: 0.7, y: 0.1}
   cellingCheckPoint: {fileID: 1482172905420985174}
   cellingCheckSize: {x: 0.7, y: 0.1}
   groundLayer:

@@ -1080,11 +1080,11 @@ PrefabInstance:
       objectReference: {fileID: 2069939272}
     - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: dialogueText.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: dialogueText.Array.data[0]
-      value: "Oh! N\xF3s encontramos de novo..."
+      value: "Voltou, \xE9? Se precisar de baterias, s\xF3 comprar."
       objectReference: {fileID: 0}
     - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: dialogueText.Array.data[1]
@@ -1740,7 +1740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763282258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.6, y: -1.908, z: 0}
+  m_LocalPosition: {x: -3.04, y: 30.1, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1762,10 +1762,7 @@ MonoBehaviour:
   profile: {fileID: 21300000, guid: d15ea198c1655494cbc3f6a3ffb865cb, type: 3}
   actorName: Cientista
   dialogueText:
-  - "Eu sou inofesivo, n\xE3o h\xE1 com o que se preocupar."
-  - "Gostaria de te ajudar para nos livrar dessa situa\xE7\xE3o."
-  - Pegue isto.
-  - "*Voc\xEA obteve Botas Propulsoras, permitindo o Pulo Duplo*"
+  - "Voc\xEA ainda n\xE3o foi derrotar o Rei Rato? O que est\xE1 esperando?"
   onTriggerArea: 0
   hasStartedDialogue: 0
   player: {fileID: 2069939272}
@@ -81864,11 +81861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.65
+      value: 6.36
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.56
+      value: 30.44
       objectReference: {fileID: 0}
     - target: {fileID: 1482172906769842968, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}
       propertyPath: m_LocalPosition.z

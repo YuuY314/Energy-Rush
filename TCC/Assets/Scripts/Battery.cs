@@ -8,7 +8,7 @@ public class Battery : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player"){
             GameLogic.instance.batterySFX.Play();
-            GameLogic.instance.batteryBackup++;
+            GameGlobalLogic.gBatteryBackup++;
             Destroy(gameObject);
         }
     }

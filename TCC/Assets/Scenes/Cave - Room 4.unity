@@ -136,17 +136,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2069939272}
-    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 470371162}
-    - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
-      propertyPath: typingSpeed
-      value: 0.025
-      objectReference: {fileID: 0}
     - target: {fileID: 1140971017, guid: 7de0b53f07b07b2448920c7e7e39a21f, type: 3}
       propertyPath: dialogueText
       value: 
@@ -228,38 +220,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1511265995, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1511265999, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: shopScreen
-      value: 
-      objectReference: {fileID: 1511265995}
-    - target: {fileID: 961830615048571046, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2029630606}
-    - target: {fileID: 961830615048571046, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 961830615048571046, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VendingMachine, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1186137290656515284, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2029630606}
-    - target: {fileID: 1186137290656515284, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 1186137290656515284, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VendingMachine, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 3941607467058054703, guid: a2a88c6236da16a4db0d5d8a81033e51, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -7382,23 +7342,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2069939272}
-    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
-      propertyPath: dialogueText.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
-      propertyPath: dialogueText.Array.data[0]
-      value: Ah! Uma alma viva aqui nas profundezas!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
-      propertyPath: dialogueText.Array.data[1]
-      value: "Sabe, eu estou precisando de umas engrenagens... Mas, eu n\xE3o consigo
-        andar por a\xED que nem voc\xEA, rob\xF4zinho."
-      objectReference: {fileID: 0}
-    - target: {fileID: 2029630607, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
-      propertyPath: dialogueText.Array.data[2]
-      value: Tem algumas engrenagens para me ajudar?
-      objectReference: {fileID: 0}
     - target: {fileID: 887853375150672674, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
       propertyPath: m_Name
       value: Vending Machine
@@ -7449,17 +7392,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
---- !u!114 &2029630606 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2029630606, guid: ca00674a6663938498a66d4e59123bfb, type: 3}
-  m_PrefabInstance: {fileID: 2029630601}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585a8729cbe479d4181196832040d65f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2069939272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1482172906769842972, guid: 2d50740fb5eef624d9f41799a3535ec4, type: 3}

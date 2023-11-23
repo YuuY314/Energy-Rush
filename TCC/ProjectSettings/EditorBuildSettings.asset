@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave - Room 6.unity
     guid: 9834932111464494db26f445f87f8e0e
   - enabled: 1
+    path: Assets/Scenes/Cave - Room 7 (Previous).unity
+    guid: c6019980f0192ae4490db53830b2448f
+  - enabled: 1
     path: Assets/Scenes/Cave - Room 7.unity
     guid: 17cc0b62a61e6934a9e1f0fdb823fa11
   - enabled: 1

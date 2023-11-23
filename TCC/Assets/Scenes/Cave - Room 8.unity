@@ -156,9 +156,9 @@ MonoBehaviour:
   mainCamera: {fileID: 1861278161}
   bossCamera: {fileID: 357026882}
   doors: {fileID: 287235559}
-  boss: {fileID: 8484498089910291421, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+  boss: {fileID: 1728704903}
   bc: {fileID: 174290406}
-  ratKing: {fileID: 8484498089910291398, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+  ratKing: {fileID: 1728704900}
   spawnPoint: {fileID: 1036879579}
 --- !u!4 &174290405
 Transform:
@@ -18190,6 +18190,83 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1728704900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8484498089910291398, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+  m_PrefabInstance: {fileID: 1763002215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1728704903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8484498089910291421, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+  m_PrefabInstance: {fileID: 1763002215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728704900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f027c85c2f144698a8eab7513f459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1763002215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8484498089910291398, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_Name
+      value: Rat King
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291398, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7415724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.503141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484498089910291418, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47f4ff91862685c4ea5dc99c6881231c, type: 3}
 --- !u!1 &1835004038
 GameObject:
   m_ObjectHideFlags: 0
@@ -18272,7 +18349,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9131396712464028018, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: levelToGo
-      value: Credits Screen
+      value: Start Screen
       objectReference: {fileID: 0}
     - target: {fileID: 9131396712464028019, guid: a09df5bab9dda994a8c7661de1376309, type: 3}
       propertyPath: m_Name

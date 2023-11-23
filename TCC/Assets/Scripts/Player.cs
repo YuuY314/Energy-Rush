@@ -68,7 +68,6 @@ public class Player : MonoBehaviour
     {
         currentShootPoint.position = new Vector2(originalShootPoint.position.x, originalShootPoint.position.y);
         instance = this;
-        
     }
 
     void Update()
@@ -101,7 +100,7 @@ public class Player : MonoBehaviour
         }
 
         // OnJumpUp();
-        JumpGravity();
+        // JumpGravity();
 
         if(Input.GetButtonDown("Fire1") && isEquippedWithWeapon1 && !isKnockbacked){
             shootSFX.Play();
@@ -170,7 +169,11 @@ public class Player : MonoBehaviour
                 }
             } else if(isJumping){
                 if(isDoubleJumping && isEquippedWithDoubleJump){
-                    rb.AddForce(new Vector2(0f, jumpForce / 1.5f), ForceMode2D.Impulse);
+                    if(rb.velocity.y > 0){
+                        rb.AddForce(new Vector2(0f, jumpForce / 1.5f), ForceMode2D.Impulse);
+                    } else if(rb.velocity.y <= 0){
+                        rb.AddForce(new Vector2(0f, jumpForce * 1.5f), ForceMode2D.Impulse);
+                    }
                     isDoubleJumping = false;
                 }
             }
@@ -180,8 +183,10 @@ public class Player : MonoBehaviour
     bool IsGrounded()
     {
         if(Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer)){
+            isJumping = false;
             return true;
         } else {
+            isJumping = true;
             return false;
         }
     }
@@ -190,7 +195,6 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.layer == 3){
-            isJumping = false;
             anim.SetBool("Jump", false);
         }
 
@@ -217,14 +221,14 @@ public class Player : MonoBehaviour
     //     }
     // }
 
-    void JumpGravity()
-    {
-        if(rb.velocity.y < 0){
-            rb.gravityScale = gravityScale * fallGravityMultipler;
-        } else {
-            rb.gravityScale = gravityScale;
-        }
-    }
+    // void JumpGravity()
+    // {
+    //     if(rb.velocity.y < 0){
+    //         rb.gravityScale = gravityScale * fallGravityMultipler;
+    //     } else {
+    //         rb.gravityScale = gravityScale;
+    //     }
+    // }
 
     void Shoot()
     {
@@ -280,4 +284,9 @@ public class Player : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.Rotate(0, 180, 0);
     }
+
+    // void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.DrawWireSphere(cellingCheckPoint.position, 0.7f);
+    // }
 }

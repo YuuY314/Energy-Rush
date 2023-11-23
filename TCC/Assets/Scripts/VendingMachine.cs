@@ -10,6 +10,12 @@ public class VendingMachine : MonoBehaviour
 
     private bool hasDialogue;
 
+    void Start()
+    {
+        hasDialogue = true;
+        DialogueManager.hasDialogue = hasDialogue;
+    }
+
     void Update()
     {
         hasDialogue = DialogueManager.hasDialogue;
