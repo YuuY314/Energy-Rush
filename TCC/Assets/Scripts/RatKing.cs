@@ -22,9 +22,18 @@ public class RatKing : MonoBehaviour
 
     void Update()
     {
+        Invoke("Agro", 1);
+
         if(enemy.enemyHealth <= maxHealth / 2){
             anim.SetBool("Roll", true);
+        } else {
+            anim.SetBool("Roll", false);
         }
+    }
+
+    void Agro()
+    {
+        anim.SetBool("Walk", true);
     }
 
     public void LookAtPlayer()
@@ -51,8 +60,7 @@ public class RatKing : MonoBehaviour
         }
     }
 
-
-    void Flip()
+    public void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0, 180, 0);

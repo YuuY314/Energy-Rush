@@ -22,7 +22,9 @@ public class RatKingRoll : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<RatKing>();
-        boss.transform.Rotate(0, 180, 0);
+        if(player.position.x < boss.transform.position.x){
+            speed = -speed;
+        }
         instance = this;
     }
 
@@ -33,10 +35,12 @@ public class RatKingRoll : StateMachineBehaviour
         if(jumpTimer <= 1f){
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             
-            int sort = Random.Range(10, 30);
-            Debug.Log(sort);
+            int sortTime = Random.Range(15, 60);
+            int sortJump = Random.Range(10, 20);
 
-            jumpTime = sort;
+            jumpForce = sortJump;
+
+            jumpTime = sortTime;
             jumpTimer = jumpTime;
         }
         jumpTimer -= jumpTimer * Time.deltaTime;
